@@ -24,23 +24,6 @@
     pickRandomPlayer();
   });
   
-  function pickRandomPlayer2() {
-    const storedPlayers = localStorage.getItem('players');
-    if (storedPlayers) {
-      const players = JSON.parse(storedPlayers);
-      if (players.length > 0) {
-        const randomIndex = Math.floor(Math.random() * players.length);
-        randomPlayer.value = players[randomIndex];
-        const randomIndex2 = Math.floor(Math.random() * players.length);
-
-        randomPlayer2.value = players[randomIndex2];
-      } else {
-        randomPlayer.value = 'No players available.';
-      }
-    } else {
-      randomPlayer.value = 'No players stored in the game.';
-    }
-  }
 
   function pickRandomPlayer() {
   const storedPlayers = localStorage.getItem('players');

@@ -25,49 +25,55 @@
   <script setup lang="ts">
 import type { NuxtLink } from '#build/components';
 
-function spill1() {
-    const originalBackgroundColor = document.body.style.backgroundColor;
-  setTimeout(() => {
-    navigateTo('/spill/playername');
-  }, 320); 
+function generateRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256); 
+  const b = Math.floor(Math.random() * 256); 
+  return `rgb(${r},${g},${b})`; 
+}
+//@ts-ignore
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  setTimeout(() => {
-    document.body.style.backgroundColor = "red";
-  }, 720); 
+async function spill1() {
+  const originalBackgroundColor = document.body.style.backgroundColor;
+  navigateTo('/spill/playername');
+  let bg = 0;
+  while (bg < 10) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  document.body.style.backgroundColor = originalBackgroundColor;
+  navigateTo('/spill/doordrink');
+}
 
-  setTimeout(() => {
-    document.body.style.backgroundColor = "blue";
-  }, 1120);
-  
-  setTimeout(() => {
-    document.body.style.backgroundColor = "green";
-  }, 1520);
+async function spill2() {
+  const originalBackgroundColor = document.body.style.backgroundColor;
+  navigateTo('/spill/flasketut/question');
+  let bg = 0;
+  while (bg < 10) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  document.body.style.backgroundColor = originalBackgroundColor;
+  navigateTo('/spill/flasketut/spin');
+}
 
-  setTimeout(() => {
-    document.body.style.backgroundColor = "orange";
-  }, 1920);
-
-  setTimeout(() => {
-    document.body.style.backgroundColor = originalBackgroundColor;
-  }, 2420); 
-
-  setTimeout(() => {
-    navigateTo('/spill/doordrink');
-  }, 2820); 
-
+async function spill3() {
+  const originalBackgroundColor = document.body.style.backgroundColor;
+  navigateTo('/spill/flasketut/question');
+  let bg = 0;
+  while (bg < 10) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  document.body.style.backgroundColor = originalBackgroundColor;
+  navigateTo('/spill/flasketut/spin');
 }
 
 
-    function spill2() {
-        setTimeout(() => {
-            navigateTo('/spill/spin')
-        }, 320)
-    }
-
-
-    function spill3() {
-        setTimeout(() => {
-            navigateTo('/spill/whointheroom')
-        }, 320)
-    }
   </script>
