@@ -1,11 +1,12 @@
 <template>
     <div class="min-h-screen flex flex-col items-center justify-center">
-      <div v-if="randomString" class="text-center">
-        <p class="text-xl">{{ randomString }}</p>
+      <div v-if="randomString" class="text-center text-white font-bold ">
+        <p class="text-2xl mb-1">Pek på den som...</p>
+        <p class="text-3xl mb-2">{{ randomString }}!</p>
       </div>
-      <!-- <button @click="pickRandomString" class="mt-5 bg-blue-500 text-white p-2 rounded"> -->
-        <!-- Pick a Random String
-      </button> -->
+      <p v-if="counter > 0" class="text-white font-bold text-3xl mt-10">{{ counter }}</p>
+      <p v-else class="text-4xl text-white mt-10">PEEEK!</p>
+
     </div>
   </template>
   
@@ -13,13 +14,26 @@
   import { ref, onMounted } from 'vue';
   
   const randomString = ref(''); // Reactive variable to store the random string
-  const stringList = ['String 1', 'String 2', 'String 3', 'String 4']; // Your list of strings
+  const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel']; // Your list of strings
+  const counter = ref(7); // Reactive variable for the countdown
   
   function pickRandomString() {
     const randomIndex = Math.floor(Math.random() * stringList.length); // Get a random index
     randomString.value = stringList[randomIndex]; // Select a random string from the list
+    startCounter(); // Initialize the counter
+  }
+  
+  function startCounter() {
+    const interval = setInterval(() => {
+      if (counter.value > 0) {
+        counter.value--; // Decrease counter
+      } else {
+        clearInterval(interval); // Stop the countdown when it reaches 0
+      }
+    }, 1000); // Decrease every second
   }
   
   onMounted(pickRandomString); // Call pickRandomString when the component mounts
   </script>
+  
   

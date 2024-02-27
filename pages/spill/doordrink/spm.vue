@@ -1,10 +1,9 @@
 <template>
     <div class="min-h-screen flex flex-col items-center justify-center text-white">
       <div v-if="randomString" class="text-center font-bold">
-        <p class="text-xl mb-1">Pek på den som...</p>
-        <p class="text-2xl mb-2">{{ randomString }}!</p>
+        <p class="text-3xl mb-2">{{ randomString }}!</p>
         
-        <p class="text-xl">eller drikk {{ velgslurker }} slurker</p>
+        <p class="text-2xl">eller drikk {{ velgslurker }} slurker</p>
 
 
       </div>
@@ -20,7 +19,7 @@
   import { ref, onMounted } from 'vue';
   
   const randomString = ref('');
-  const stringList = ['har verst musikksmak', 'har dårligst stil', 'er minst attraktiv']; 
+  const stringList = ['Pek på den som har verst musikksmak', 'Pek på den som har dårligst stil', 'Pek på den som er minst attraktiv']; 
 
   const velgslurker = ref(''); 
   const slurker = ['2', '3', '4', '5', ]; 
