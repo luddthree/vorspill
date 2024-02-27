@@ -10,9 +10,9 @@
   
       <button @click="spill2()" class="animate-button rounded mt-4 -rotate-1 text-white transition ease-in-out delay-50 bg-red-600 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-50 ...">flasketuten</button>
   
-      <button @click="spill3()" class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-yellow-400 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-yellow-500 duration-50 ...">Pekeleken</button>
+      <button @click="spill3()" class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-yellow-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-50 ...">Pekeleken</button>
   
-      <button class="animate-button rounded text-white mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-600 duration-50 ...">Jeg har aldri</button>
+      <button class="animate-button rounded text-white mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
 
       <button class="animate-button rounded text-white mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-28 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">spill 5</button>
 
@@ -29,12 +29,12 @@
 //loop for å kjøre animasjonen
 async function animate() {
   let ani = 0;
-  while (ani < 10) {
+  while (ani < 69) {
     animateButtonsSequentially();
     await sleep(11000);
   }
 }
-//copypaste knapp animsajon
+//copypaste knapp animasjon
 const buttons = ref([]);
 onMounted(() => {
   buttons.value = document.querySelectorAll('.animate-button'); 
@@ -52,6 +52,7 @@ function animateButtonsSequentially(index = 0) {
     animateButtonsSequentially(index + 1);
   }, { once: true });
 }
+
 //random farger
 function generateRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -75,7 +76,7 @@ async function spill1() {
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/doordrink');
+  navigateTo('/spill/doordrink/spm');
 }
 
 async function spill2() {
