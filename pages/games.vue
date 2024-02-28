@@ -12,7 +12,7 @@
   
       <button @click="spill3()" class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-yellow-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-50 ...">Pekeleken</button>
   
-      <button class="animate-button rounded text-white mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
+      <button @click="spill4()" class="animate-button rounded text-white mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
 
       <button class="animate-button rounded text-white mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Kommer snart</button>
 
@@ -77,12 +77,12 @@ async function spill1() {
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/doordrink/spm');
+  navigateTo('/spill/doordrink');
 }
 
 async function spill2() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/flasketut/spm');
+  navigateTo('/spill/flasketut');
   let bg = 0;
   while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();
@@ -95,17 +95,42 @@ async function spill2() {
 
 async function spill3() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/pekeleken/spm');
+  navigateTo('/spill/everyone');
   let bg = 0;
-  while (bg < 15) {
+  while (bg < 7) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  navigateTo('/spill/pekeleken');
+  bg = 0;
+  while (bg < 14) {
     document.body.style.backgroundColor = generateRandomColor();
     await sleep(500);
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  // navigateTo('/spill/pekeleken/spin');
 }
 
+
+async function spill4() {
+  const originalBackgroundColor = document.body.style.backgroundColor;
+  navigateTo('/spill/everyone');
+  let bg = 0;
+  while (bg < 7) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  navigateTo('/spill/jegharaldri');
+  bg = 0;
+  while (bg < 17) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
+  }
+  document.body.style.backgroundColor = originalBackgroundColor;
+}
   </script>
 
 <style>

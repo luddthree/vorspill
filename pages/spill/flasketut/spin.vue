@@ -56,7 +56,7 @@ function sleep(ms) {
 
   async function spill2() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/flasketut/spm');
+  navigateTo('/spill/flasketut');
   let bg = 0;
   while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();
