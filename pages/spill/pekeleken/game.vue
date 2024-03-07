@@ -10,13 +10,15 @@
     <div class="text-center fixed inset-x-0 bottom-20">
       <NuxtLink to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
       <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
+      <NuxtLink v-if="mix" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
+
   </div>
     </div>
   </template>
   
   <script setup>
   import { ref, onMounted } from 'vue';
-  
+  let mix = true;
   const randomString = ref(''); // Reactive variable to store the random string
   const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel']; // Your list of strings
   const counter = ref(7); // Reactive variable for the countdown
