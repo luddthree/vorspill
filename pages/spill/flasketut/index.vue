@@ -1,24 +1,36 @@
-<template>
-    <div class="min-h-screen flex flex-col items-center justify-center">
-      <div v-if="randomString" class="text-center font-bold text-white">
-        <p class="text-2xl">Den flasketuten peker på...</p>
-        <p class="text-3xl">{{ randomString }}</p>
-      </div>
+<template></template>
 
-    </div>
-  </template>
+<script setup>
+import { ref, onMounted } from 'vue';
+
+
+onMounted(spill2);
+
   
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  
-  const randomString = ref(''); 
-  const stringList = ['kan dele ut 3 slurker!', 'må drikke 2 slurker!']; 
-  
-  function pickRandomString() {
-    const randomIndex = Math.floor(Math.random() * stringList.length); 
-    randomString.value = stringList[randomIndex]; 
+  //random farger
+function generateRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256); 
+  const b = Math.floor(Math.random() * 256); 
+  return `rgb(${r},${g},${b})`; 
+}
+//@ts-ignore
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//bakgrunssfarge endrer og viser spillsiden
+
+async function spill2() {
+  const originalBackgroundColor = document.body.style.backgroundColor;
+  navigateTo('/spill/flasketut/game');
+  let bg = 0;
+  while (bg < 10) {
+    document.body.style.backgroundColor = generateRandomColor();
+    await sleep(500);
+    bg++;
   }
-  
-  onMounted(pickRandomString); 
-  </script>
-  
+  document.body.style.backgroundColor = originalBackgroundColor;
+  navigateTo('/spill/flasketut/spin');
+}
+</script>

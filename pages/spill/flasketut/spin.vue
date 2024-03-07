@@ -4,7 +4,7 @@
     </div>
 
     <div v-if="spinCompleted" class="text-center fixed inset-x-0 bottom-20">
-    <button @click="spill2" class="text-white text-xl rounded bg-blue-500 py-3 px-5 mr-2">Spill igjen</button>
+      <NuxtLink to="/spill/flasketut" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
     <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
   </div>
   </template>
@@ -42,30 +42,6 @@ onMounted(() => {
   document.head.appendChild(styleSheet);
 });
 
-
-  function generateRandomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256); 
-  const b = Math.floor(Math.random() * 256); 
-  return `rgb(${r},${g},${b})`; 
-}
-//@ts-ignore
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-  async function spill2() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/flasketut');
-  let bg = 0;
-  while (bg < 10) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/flasketut/spin');
-}
   </script>
   
 

@@ -18,7 +18,7 @@
 
       <button class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Kommer snart</button>
 
-      <button class="animate-button rounded text-white mt-16 font-bold rotate-0 transition ease-in-out delay-50 bg-pink-500 py-4 px-20 text-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
+      <button @click="mix()" class="animate-button rounded text-white mt-16 font-bold rotate-0 transition ease-in-out delay-50 bg-pink-500 py-4 px-20 text-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
 
     </div>
 
@@ -66,70 +66,24 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//bakgrunssfarge endrer og viser spillsiden
-async function spill1() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/playername');
-  let bg = 0;
-  while (bg < 10) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  document.body.style.backgroundColor = originalBackgroundColor;
+function spill1() {
   navigateTo('/spill/doordrink');
 }
-
-async function spill2() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
+function spill2() {
   navigateTo('/spill/flasketut');
-  let bg = 0;
-  while (bg < 10) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/flasketut/spin');
 }
-
-async function spill3() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/everyone');
-  let bg = 0;
-  while (bg < 7) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
+function spill3() {
   navigateTo('/spill/pekeleken');
-  bg = 0;
-  while (bg < 14) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  document.body.style.backgroundColor = originalBackgroundColor;
+}
+function spill4() {
+  navigateTo('/spill/jegharaldri');
 }
 
 
-async function spill4() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/everyone');
-  let bg = 0;
-  while (bg < 7) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  navigateTo('/spill/jegharaldri');
-  bg = 0;
-  while (bg < 17) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  document.body.style.backgroundColor = originalBackgroundColor;
+
+function mix() {
+  navigateTo('/spill/mix');
+
 }
   </script>
 
