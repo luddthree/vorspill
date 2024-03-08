@@ -2,7 +2,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const showParagraph = computed(() => route.query.showParagraph === 'true')
 
 onMounted(spill1);
 
@@ -23,7 +26,10 @@ function sleep(ms) {
 //bakgrunssfarge endrer og viser spillsiden
 async function spill1() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/playername');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/playername?showParagraph=true');
+  } else {
+  navigateTo('/spill/playername');}
   let bg = 0;
   while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();
@@ -31,7 +37,10 @@ async function spill1() {
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/doordrink/game');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/doordrink/game?showParagraph=true');
+  } else {
+  navigateTo('/spill/doordrink/game');}
 }
 
 </script>

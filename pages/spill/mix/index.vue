@@ -21,9 +21,9 @@
   function nav() {
     const next = Math.floor(Math.random() * 1);
     if (next === 0) {
-      navigateTo('/spill/flasketut?showParagraph=true');
+      navigateTo('/spill/doordrink?showParagraph=true');
     } else if (next === 1) {
-      navigateTo('/spill/flasketut?showParagraph=true');
+      navigateTo('/spill/doordrink?showParagraph=true');
     } else if (next === 2) {
       navigateTo('/spill/pekeleken?showParagraph=true');
     } else if (next === 3) {

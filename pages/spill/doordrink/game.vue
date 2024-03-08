@@ -9,21 +9,26 @@
       </div>
 
       <div class="text-center fixed inset-x-0 bottom-20">
-    <NuxtLink to="/spill/doordrink" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
-    <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
-  </div>
+      <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
+      <NuxtLink v-if="!showParagraph" to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
+      <NuxtLink v-if="showParagraph" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
+    </div>
     </div>
   </template>
   
   <script setup>
   import { ref, onMounted } from 'vue';
-  
+  import { useRoute } from 'vue-router'
+
+  const route = useRoute()
+  const showParagraph = computed(() => route.query.showParagraph === 'true')
+
   const randomString = ref('');
   const stringList = ['Pek på den som har verst musikksmak', 'Pek på den som har dårligst stil', 'Pek på den som er minst attraktiv']; 
 
   const velgslurker = ref(''); 
   const slurker = ['2', '3', '4', '5', ]; 
-  
+    
   function pickRandomString() {
     const randomIndex = Math.floor(Math.random() * stringList.length); 
     randomString.value = stringList[randomIndex];
@@ -31,7 +36,7 @@
     const randomslurker = Math.floor(Math.random() * slurker.length); 
     velgslurker.value = slurker[randomslurker]; 
   }
-  
+
   onMounted(pickRandomString);
   </script>
   
