@@ -23,26 +23,26 @@
   const route = useRoute()
   const showParagraph = computed(() => route.query.showParagraph === 'true')
 
-  const randomString = ref(''); // Reactive variable to store the random string
-  const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel']; // Your list of strings
-  const counter = ref(7); // Reactive variable for the countdown
+  const randomString = ref(''); 
+  const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel'];
+  const counter = ref(7); 
   
   function pickRandomString() {
-    const randomIndex = Math.floor(Math.random() * stringList.length); // Get a random index
-    randomString.value = stringList[randomIndex]; // Select a random string from the list
-    startCounter(); // Initialize the counter
+    const randomIndex = Math.floor(Math.random() * stringList.length); 
+    randomString.value = stringList[randomIndex];
+    startCounter(); 
   }
   
   function startCounter() {
     const interval = setInterval(() => {
       if (counter.value > 0) {
-        counter.value--; // Decrease counter
+        counter.value--; 
       } else {
-        clearInterval(interval); // Stop the countdown when it reaches 0
+        clearInterval(interval); 
       }
-    }, 1000); // Decrease every second
+    }, 1000);
   }
   
-  onMounted(pickRandomString); // Call pickRandomString when the component mounts
+  onMounted(pickRandomString); 
 
   </script>
