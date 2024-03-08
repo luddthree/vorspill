@@ -3,7 +3,10 @@
 <script setup>
 
 import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const showParagraph = computed(() => route.query.showParagraph === 'true')
 
 onMounted(spill4);
 
@@ -24,14 +27,20 @@ function sleep(ms) {
 
 async function spill4() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/everyone');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/everyone?showParagraph=true');
+  } else {
+  navigateTo('/spill/everyone');}
   let bg = 0;
   while (bg < 7) {
     document.body.style.backgroundColor = generateRandomColor();
     await sleep(500);
     bg++;
   }
-  navigateTo('/spill/jegharaldri/game');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/jegharaldri/game?showParagraph=true');
+  } else {
+  navigateTo('/spill/jegharaldri/game');}
   bg = 0;
   while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();

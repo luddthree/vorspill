@@ -19,13 +19,13 @@
 
 
   function nav() {
-    const next = Math.floor(Math.random() * 3);
+    const next = Math.floor(Math.random() * 1);
     if (next === 0) {
-      navigateTo('/spill/doordrink?showParagraph=true');
+      navigateTo('/spill/flasketut?showParagraph=true');
     } else if (next === 1) {
       navigateTo('/spill/flasketut?showParagraph=true');
     } else if (next === 2) {
-      navigateTo('/spill/jegharaldri?showParagraph=true');
+      navigateTo('/spill/pekeleken?showParagraph=true');
     } else if (next === 3) {
       navigateTo('/spill/pekeleken?showParagraph=true');
     } else {

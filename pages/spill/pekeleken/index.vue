@@ -29,7 +29,6 @@ async function spill3() {
   const originalBackgroundColor = document.body.style.backgroundColor;
   if (showParagraph.value == true) {
     navigateTo('/spill/everyone?showParagraph=true');
-
 } else {
   navigateTo('/spill/everyone');}
   let bg = 0;
@@ -40,7 +39,6 @@ async function spill3() {
   }
   if (showParagraph.value == true) {
     navigateTo('/spill/pekeleken/game?showParagraph=true');
-
 } else {
   navigateTo('/spill/pekeleken/game');}
   bg = 0;

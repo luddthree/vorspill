@@ -2,7 +2,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const showParagraph = computed(() => route.query.showParagraph === 'true')
 
 onMounted(spill2);
 
@@ -23,7 +26,10 @@ function sleep(ms) {
 
 async function spill2() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  navigateTo('/spill/flasketut/game');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/flasketut/game?showParagraph=true');
+  } else {
+  navigateTo('/spill/flasketut/game');}
   let bg = 0;
   while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();
@@ -31,6 +37,9 @@ async function spill2() {
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  navigateTo('/spill/flasketut/spin');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/flasketut/spin?showParagraph=true');
+  } else {
+  navigateTo('/spill/flasketut/spin');}
 }
 </script>

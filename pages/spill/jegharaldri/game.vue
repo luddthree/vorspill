@@ -6,15 +6,20 @@
       </div>
 
       <div class="text-center fixed inset-x-0 bottom-20">
-        <NuxtLink to="/spill/jegharaldri" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
       <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
-  </div>
+      <NuxtLink v-if="!showParagraph" to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
+      <NuxtLink v-if="showParagraph" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
+    </div>
     </div>
   </template>
   
   <script setup>
   import { ref, onMounted } from 'vue';
-  
+  import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const showParagraph = computed(() => route.query.showParagraph === 'true')
+
   const randomString = ref(''); 
   const stringList = ['jukset på en prøve', 'stjålet noe']; 
   
