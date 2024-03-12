@@ -6,7 +6,7 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const showParagraph = computed(() => route.query.showParagraph === 'true')
+const mixround = computed(() => route.query.mixround === 'true')
 
 onMounted(spill4);
 
@@ -27,8 +27,8 @@ function sleep(ms) {
 
 async function spill4() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  if (showParagraph.value == true) {
-    navigateTo('/spill/everyone?showParagraph=true');
+  if (mixround.value == true) {
+    navigateTo('/spill/everyone?mix=true');
   } else {
   navigateTo('/spill/everyone');}
   let bg = 0;
@@ -37,8 +37,8 @@ async function spill4() {
     await sleep(500);
     bg++;
   }
-  if (showParagraph.value == true) {
-    navigateTo('/spill/jegharaldri/game?showParagraph=true');
+  if (mixround.value == true) {
+    navigateTo('/spill/jegharaldri/game?mix=true');
   } else {
   navigateTo('/spill/jegharaldri/game');}
   bg = 0;

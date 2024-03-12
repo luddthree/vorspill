@@ -9,8 +9,8 @@
 
     <div class="text-center fixed inset-x-0 bottom-20">
       <NuxtLink v-if="counter <= 0" to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
-      <NuxtLink v-if="counter <= 0 && !showParagraph" to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
-      <NuxtLink v-if="counter <= 0 && showParagraph" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
+      <NuxtLink v-if="counter <= 0 && !mixround" to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
+      <NuxtLink v-if="counter <= 0 && mixround" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@
   import { useRoute } from 'vue-router'
 
   const route = useRoute()
-  const showParagraph = computed(() => route.query.showParagraph === 'true')
+  const mixround = computed(() => route.query.mixround === 'true')
 
   const randomString = ref(''); 
   const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel'];

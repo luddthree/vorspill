@@ -21,13 +21,13 @@
   function nav() {
     const next = Math.floor(Math.random() * 3);
     if (next === 0) {
-      navigateTo('/spill/doordrink?showParagraph=true');
+      navigateTo('/spill/doordrink?mix=true');
     } else if (next === 1) {
-      navigateTo('/spill/flasketut?showParagraph=true');
+      navigateTo('/spill/flasketut?mix=true');
     } else if (next === 2) {
-      navigateTo('/spill/jegharaldri?showParagraph=true');
+      navigateTo('/spill/jegharaldri?mix=true');
     } else if (next === 3) {
-      navigateTo('/spill/pekeleken?showParagraph=true');
+      navigateTo('/spill/pekeleken?mix=true');
     } else {
       navigateTo('/');}
   }
