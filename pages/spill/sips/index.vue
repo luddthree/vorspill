@@ -1,17 +1,17 @@
 <template></template>
 
 <script setup>
-
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const showParagraph = computed(() => route.query.showParagraph === 'true')
 
-onMounted(spill4);
+onMounted(spill1);
 
-  
-  //random farger
+
+
+//random farger
 function generateRandomColor() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256); 
@@ -24,29 +24,23 @@ function sleep(ms) {
 }
 
 //bakgrunssfarge endrer og viser spillsiden
-
-async function spill4() {
+async function spill1() {
   const originalBackgroundColor = document.body.style.backgroundColor;
   if (showParagraph.value == true) {
-    navigateTo('/spill/everyone?showParagraph=true');
+    navigateTo('/spill/playername?showParagraph=true');
   } else {
-  navigateTo('/spill/everyone');}
+  navigateTo('/spill/playername');}
   let bg = 0;
-  while (bg < 7) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
-  }
-  if (showParagraph.value == true) {
-    navigateTo('/spill/jegharaldri/game?showParagraph=true');
-  } else {
-  navigateTo('/spill/jegharaldri/game');}
-  bg = 0;
-  while (bg < 5) {
+  while (bg < 10) {
     document.body.style.backgroundColor = generateRandomColor();
     await sleep(500);
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
+  if (showParagraph.value == true) {
+    navigateTo('/spill/sips/game?showParagraph=true');
+  } else {
+  navigateTo('/spill/sips/game');}
 }
+
 </script>

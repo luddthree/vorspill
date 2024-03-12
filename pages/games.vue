@@ -14,7 +14,7 @@
   
       <button @click="spill4()" class="animate-button rounded text-white mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
 
-      <button class="animate-button rounded text-white mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Kommer snart</button>
+      <button @click="spill5()" class="animate-button rounded text-white mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Drikk</button>
 
       <button class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Kommer snart</button>
 
@@ -77,6 +77,9 @@ function spill3() {
 }
 function spill4() {
   navigateTo('/spill/jegharaldri');
+}
+function spill5() {
+  navigateTo('/spill/sips');
 }
 
 

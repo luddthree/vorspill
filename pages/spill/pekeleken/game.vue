@@ -4,14 +4,21 @@
       <p class="text-2xl mb-1">Pek på den som...</p>
       <p class="text-3xl mb-2">{{ randomString }}!</p>
     </div>
-    <p v-if="counter > 0" class="text-white font-bold text-3xl mt-10">{{ counter }}</p>
+    <p v-if="counter > 0" class="text-white font-bold text-5xl mt-10">{{ counter }}</p>
     <p v-else class="text-4xl text-white mt-10">PEEEK!</p>
 
-    <div class="text-center fixed inset-x-0 bottom-20">
-      <NuxtLink v-if="counter <= 0" to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
-      <NuxtLink v-if="counter <= 0 && !showParagraph" to="/spill/pekeleken" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Spill igjen</NuxtLink>
-      <NuxtLink v-if="counter <= 0 && showParagraph" to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Fortsett</NuxtLink>
+
+    <div class="text-left fixed inset-x-0 left-6 top-12" style="z-index: 2;">
+      <NuxtLink v-if="counter <= 0" to="/games" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+        </svg>
+        <span class="sr-only">Icon description</span>
+      </NuxtLink>
     </div>
+
+    <NuxtLink v-if="counter <= 0 && !showParagraph" to="/spill/pekeleken" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
+    <NuxtLink v-if="counter <= 0 && showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
   </div>
 </template>
 
