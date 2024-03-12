@@ -9,7 +9,7 @@ onMounted(spill3);
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const mixround = computed(() => route.query.mixround === 'true')
+const showParagraph = computed(() => route.query.showParagraph === 'true')
 
   
   //random farger
@@ -27,8 +27,8 @@ function sleep(ms) {
 //bakgrunssfarge endrer og viser spillsiden
 async function spill3() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  if (mixround.value == true) {
-    navigateTo('/spill/everyone?mix=true');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/everyone?showParagraph=true');
 } else {
   navigateTo('/spill/everyone');}
   let bg = 0;
@@ -37,8 +37,8 @@ async function spill3() {
     await sleep(500);
     bg++;
   }
-  if (mixround.value == true) {
-    navigateTo('/spill/pekeleken/game?mix=true');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/pekeleken/game?showParagraph=true');
 } else {
   navigateTo('/spill/pekeleken/game');}
   bg = 0;

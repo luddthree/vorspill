@@ -5,7 +5,7 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const mixround = computed(() => route.query.mixround === 'true')
+const showParagraph = computed(() => route.query.showParagraph === 'true')
 
 onMounted(spill2);
 
@@ -26,8 +26,8 @@ function sleep(ms) {
 
 async function spill2() {
   const originalBackgroundColor = document.body.style.backgroundColor;
-  if (mixround.value == true) {
-    navigateTo('/spill/flasketut/game?mix=true');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/flasketut/game?showParagraph=true');
   } else {
   navigateTo('/spill/flasketut/game');}
   let bg = 0;
@@ -37,8 +37,8 @@ async function spill2() {
     bg++;
   }
   document.body.style.backgroundColor = originalBackgroundColor;
-  if (mixround.value == true) {
-    navigateTo('/spill/flasketut/spin?mix=true');
+  if (showParagraph.value == true) {
+    navigateTo('/spill/flasketut/spin?showParagraph=true');
   } else {
   navigateTo('/spill/flasketut/spin');}
 }
