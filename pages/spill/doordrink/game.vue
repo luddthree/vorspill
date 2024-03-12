@@ -27,7 +27,7 @@
         <p  v-if="!showParagraph" class="text-xs">Trykk på skjermen for å spille igjen</p>
         <p  v-if="showParagraph" class="text-xs">Trykk på skjermen for å gå videre</p>
         </div>
-        
+
   </template>
   
   <script setup>
@@ -38,7 +38,7 @@
   const showParagraph = computed(() => route.query.showParagraph === 'true')
 
   const randomString = ref('');
-  const stringList = ['Pek på den som har verst musikksmak', 'Pek på den som har dårligst stil', 'Pek på den som er minst attraktiv']; 
+  const stringList = ['Pek på den som har verst musikksmak', 'Pek på den som har dårligst stil', 'Pek på den som er minst attraktiv', 'Spill de neste 3 rundene i bare undertøy', 'Legg ut at du støtter putin på mystory', 'Ta en backflip', 'Hvem i rommet skulle du ønske ikke var her', 'Vipps 100kr til 90550266', 'La alle få kile deg i 20 sek']; 
 
   const velgslurker = ref(''); 
   const slurker = ['2', '3', '4', '5', ]; 
