@@ -15,6 +15,7 @@
             <button type="submit" class="bg-blue-500 text-white p-2 ml-2 rounded">Legg til</button>
           </form>
         </div>
+        
   
         <div class="mt-4">
           <ul class="">
@@ -28,6 +29,11 @@
         </div>
       </div>
   
+      <div class="text-center fixed inset-x-0 bottom-36">
+        <NuxtLink to="/spill" class="text-white text-sm rounded bg-blue-500 py-3 px-4">Hvordan spille</NuxtLink>
+
+      </div>
+
       <div class="text-center fixed inset-x-0 bottom-20">
         <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Start spill</NuxtLink>
       </div>

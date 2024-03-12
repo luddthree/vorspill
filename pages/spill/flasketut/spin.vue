@@ -15,6 +15,11 @@
     <NuxtLink v-if="!showParagraph" to="/spill/flasketut" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
     <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
 </div>
+
+<div v-if="spinCompleted" class="text-center text-white fixed inset-x-0 bottom-16">
+        <p  v-if="!showParagraph" class="text-xs">Trykk på skjermen for å spille igjen</p>
+        <p  v-if="showParagraph" class="text-xs">Trykk på skjermen for å gå videre</p>
+        </div>
   </template>
   
   <script setup>

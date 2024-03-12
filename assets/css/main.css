@@ -5,3 +5,13 @@
 body {
     @apply bg-sky-950;
 }
+
+@layer components {
+    .shead {
+        @apply text-white text-center font-semibold mt-5 text-lg;
+    }
+    .stext {
+        @apply text-white text-center mt-1 text-sm;
+    }
+
+}

@@ -1,14 +1,5 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center justify-center text-white">
-
-
-      </div>
-
-      <div class="text-center fixed inset-x-0 bottom-20">
-    <NuxtLink to="/spill/mix" class="text-white text-xl rounded bg-blue-500 py-3 px-5 mr-2">Videre</NuxtLink>
-    <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-5 ml-2">Tilbake</NuxtLink>
-  </div>
-  </template>
+</template>
   
   <script setup lang="ts">
   import { ref, onMounted } from 'vue';
