@@ -29,6 +29,13 @@
         <p class="stext">Dette er en blanding av alle spillene over, der man ikke vet hva som blir det neste spillet.</p>
     </div>
     <div>
+        <h1 class="shead">Fellesfitta</h1>
+        <p class="stext">Spilleren må ta en slurk fra drikken sin hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
+        <div class="flex items-center justify-center mt-1">
+        <iframe src="https://www.youtube.com/embed/iMRITRuseq4?si=-qT_5zeK02S0c9Ub&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div>
         <h1 class="shead">Drikk slurker</h1>
         <p class="stext">Spilleren må drikke antallet slurker fra drikken sin.</p>
     </div>
@@ -42,7 +49,10 @@
 
     <div class="text-center text-white fixed inset-x-0 bottom-16">
         <p class="text-sm mb-4">Jeg er klar til å spille!</p>
-        <NuxtLink to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Start spill</NuxtLink>
+        
+        <NuxtLink v-if="!felles" to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Start spill</NuxtLink>
+        <NuxtLink v-if="felles" to="/spill/felles" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Tilbake</NuxtLink>
+
       </div>
 
 
@@ -55,3 +65,11 @@
       </NuxtLink>
     </div>
 </template>
+
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const felles = computed(() => route.query.felles === 'true')
+
+</script>
