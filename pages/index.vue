@@ -1,4 +1,6 @@
 <template>
+
+  
     <div class="flex flex-col min-h-screen">
       <div class="flex-grow">
         <div class="mt-5">
@@ -40,7 +42,10 @@
     </div>
   </template>
   
+  
   <script lang="ts">
+
+  
   import { defineComponent, ref, onMounted } from 'vue';
   
   export default defineComponent({
@@ -80,6 +85,8 @@
       };
     },
   });
+
+  
   </script>
   
   <style scoped>

@@ -1,4 +1,5 @@
 <template>
+  
     <div class="text-center font-bold mt-3">
         <NuxtLink to="/">
             <img src="/vorsspill.png" alt="logo" class="w-1/4 h-1/4 mx-auto">
@@ -25,6 +26,7 @@
   </template>
   
   <script setup>
+  
   import { onMounted, ref } from 'vue';
 // import type { NuxtLink } from '#build/components';
 //loop for å kjøre animasjonen

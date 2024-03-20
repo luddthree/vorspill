@@ -1,21 +1,65 @@
 <template>
+  <div class="flex justify-center items-center mt-40">
+      <!-- The `id` attribute is necessary for the YouTube API to target the iframe -->
+      <iframe id="youtube-player" width="370" height="230" src="https://www.youtube.com/embed/gHs2Ucs3Dog?enablejsapi=1" allow="autoplay; fullscreen" frameborder="0"></iframe>
+  </div>
+  
+  <div class="text-center">
+      <!-- Use `v-if` to conditionally render the button based on whether the video has ended -->
+      <!-- <button v-if="videoEnded" @click="skip" class="rounded bg-green-500 p-3 mt-10 px-20">Gå tilbake</button> -->
+    <div class="text-center text-white fixed inset-x-0 bottom-16">
+      <button v-if="!videoEnded" @click="skip" class="rounded bg-blue-900 py-4 mt-10 px-20">Jeg er for feig, skip</button>
+    </div>
+      <div>
+    <!-- <NuxtLink v-if="videoEnded" to="/games" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink> -->
+    <button v-if="videoEnded" @click="skip" class="w-full h-full absolute"style="z-index: 1;"></button>
 
-<div class="flex justify-center items-center">
-    <iframe src="https://www.youtube.com/embed/gHs2Ucs3Dog?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-</div>
+    <!-- <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink> -->
+    </div>
 
-<div class="text-center">
-<button @click="skip" class="rounded bg-green-500 p7-3 mt-10 px-20">skip</button>
-</div>
+    <div class="text-center text-white fixed inset-x-0 bottom-16">
+        <p  v-if="videoEnded" class="text-xs">Trykk på skjermen for å gå tilbake</p>
+        </div>
 
-</template>
+  </div>
+  </template>
+  
+  <script setup>
+  import { ref, onMounted } from 'vue';
+  import { useRoute, useRouter } from 'vue-router'
+  
+  const router = useRouter();
+  const route = useRoute();
+  const videoEnded = ref(false); // This ref will control the visibility of the button
+  
+  // Load the YouTube IFrame Player API code asynchronously
+  onMounted(() => {
+      let tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      let firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+      window.onYouTubeIframeAPIReady = function() {
+          // This function creates an <iframe> (and YouTube player) after the API code downloads.
+          var player = new YT.Player('youtube-player', {
+              events: {
+                  'onStateChange': onPlayerStateChange
+              }
+          });
+      };
+  
+      function onPlayerStateChange(event) {
+          // When video ends (state code 0), set videoEnded to true
+          if (event.data == YT.PlayerState.ENDED) {
+              videoEnded.value = true;
+          }
+      }
+  });
+  
+
+  
 
 
-<script setup>
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
 const showParagraph = computed(() => route.query.showParagraph === 'true')
 
 onMounted(bak);
@@ -48,6 +92,7 @@ async function bak() {
 
 async function skip() {
   bg = true;
+  navigateTo('/games');
 //   navigateTo('/spill/felles/game?showParagraph=true');
 }
 </script>
