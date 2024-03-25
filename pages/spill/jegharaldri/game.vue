@@ -33,7 +33,11 @@ const route = useRoute()
 const showParagraph = computed(() => route.query.showParagraph === 'true')
 
   const randomString = ref(''); 
-  const stringList = ['jukset på en prøve', 'stjålet noe', 'Kjørt uten lappen', 'Tisset på meg i voksen alder']; 
+  const stringList = ['stjålet noe', 'Tisset på meg i voksen alder', 
+  'fantasert om noen i rommet', 'prøvd å suge meg selv', 
+  'ligget med noen i rommet', 'drept noen', 'trudd jeg var homo', 
+  'smakt på mitt eget tiss', 'onanert til noen i rommet']; 
+  
   const waitString = ref(false);
 
   function pickRandomString() {

@@ -12,7 +12,9 @@
   import { ref, onMounted } from 'vue';
   
   const randomString = ref(''); 
-  const stringList = ['kan dele ut 3 slurker!', 'må drikke 2 slurker!']; 
+  const stringList = ['kan dele ut 4 slurker!', 'kan dele ut 2 slurker!'
+  , 'må drikke 1 slurk!', 'må drikke 2 slurker!', 'må drikke 3 slurker!'
+  , 'må drikke 4 slurker!']; 
   
   function pickRandomString() {
     const randomIndex = Math.floor(Math.random() * stringList.length); 

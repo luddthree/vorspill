@@ -37,7 +37,12 @@
   const showParagraph = computed(() => route.query.showParagraph === 'true')
 
   const randomString = ref(''); 
-  const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel', 'er mest uskyldig', 'kommer til å ende opp som naver', 'har lavest iq'];
+  const stringList = ['har dårligst musikksmak', 'kommer til å havne i fengsel', 
+  'er mest uskyldig', 'kommer til å ende opp som naver', 'har lavest iq', 'er mest nørd', 
+  'hadde sugd pikk for minst penger', 'er mest sannsynlig til å bli rik', 
+  'er mest sannsynlig til å bli kjendis', 'er mest sannsynlig til å bli president', 
+  'er mest sannsynlig til å bli en seriemorder', 'er mest sannsynlig til å bli en pornostjerne'];
+  
   const counter = ref(7); 
   
   function pickRandomString() {
