@@ -41,7 +41,8 @@
   'er mest uskyldig', 'kommer til å ende opp som naver', 'har lavest iq', 'er mest nørd', 
   'hadde sugd pikk for minst penger', 'er mest sannsynlig til å bli rik', 
   'er mest sannsynlig til å bli kjendis', 'er mest sannsynlig til å bli president', 
-  'er mest sannsynlig til å bli en seriemorder', 'er mest sannsynlig til å bli en pornostjerne'];
+  'er mest sannsynlig til å bli en seriemorder', 'er mest sannsynlig til å bli en pornostjerne',
+  'er mest sannsynlig til å bli en narkoman', 'er mest sannsynlig til å bli en alkoholiker'];
   
   const counter = ref(7); 
   

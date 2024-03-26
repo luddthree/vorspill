@@ -36,7 +36,8 @@ const showParagraph = computed(() => route.query.showParagraph === 'true')
   const stringList = ['stjålet noe', 'Tisset på meg i voksen alder', 
   'fantasert om noen i rommet', 'prøvd å suge meg selv', 
   'ligget med noen i rommet', 'drept noen', 'trudd jeg var homo', 
-  'smakt på mitt eget tiss', 'onanert til noen i rommet']; 
+  'smakt på mitt eget tiss', 'onanert til noen i rommet', 'snitcha på noen i rommet',
+  'spillt dette spillet', ]; 
   
   const waitString = ref(false);
 
