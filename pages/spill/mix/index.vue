@@ -10,7 +10,7 @@
 
 
   function nav() {
-    const next = Math.floor(Math.random() * 5);
+    const next = Math.floor(Math.random() * 6);
     if (next === 0) {
       navigateTo('/spill/flasketut?showParagraph=true');
     } else if (next === 1) {
@@ -23,6 +23,8 @@
       navigateTo('/spill/sips?showParagraph=true');
     } else if (next === 5) {
       navigateTo('/spill/doordrink?showParagraph=true');
+    } else if (next === 6) {
+      navigateTo('/spill/doordrink/2player');
     } else {
       navigateTo('/');}
   }
