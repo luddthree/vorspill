@@ -47,10 +47,13 @@
     </div>
 
 
-    <div class="text-center text-white fixed inset-x-0 bottom-16">
-        <p class="text-sm mb-4">Jeg er klar til å spille!</p>
+    <div class=" bg-sky-950 text-center text-white fixed inset-x-0 bottom-16">
+        <p class="text-sm mb-2 mt-1">Jeg er klar til å spille!</p>
         
-        <NuxtLink v-if="!felles" to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Start spill</NuxtLink>
+        <NuxtLink v-if="!felles" to="/games" class="text-white ml-2 text-xl rounded bg-blue-500 py-3 px-28 inline-flex">Start spill 
+
+<svg class="h-8 w-8 text-white ml-3"  width="24" height="24" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
+</NuxtLink>
         <NuxtLink v-if="felles" to="/spill/felles/text2" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Tilbake</NuxtLink>
 
       </div>

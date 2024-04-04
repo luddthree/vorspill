@@ -6,6 +6,14 @@ body {
     @apply bg-sky-950;
 }
 
+
+/* @layer base {
+    body {
+      @apply bg-center;
+      background-image: url('/bakgrunn.png');
+    }
+  } */
+
 @layer components {
     .shead {
         @apply text-white text-center font-semibold mt-5 text-lg;
