@@ -23,8 +23,6 @@
       navigateTo('/spill/sips?showParagraph=true');
     } else if (next === 5) {
       navigateTo('/spill/doordrink?showParagraph=true');
-    } else if (next === 6) {
-      navigateTo('/spill/doordrink/2player');
     } else {
       navigateTo('/');}
   }

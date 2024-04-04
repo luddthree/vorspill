@@ -1,46 +1,39 @@
-<template></template>
+<template>
+</template>
+  
+  <script setup lang="ts">
+  import { ref, onMounted } from 'vue';
+  import { useRoute } from 'vue-router'
 
-<script setup>
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router'
+  const route = useRoute()
+  const showParagraph = computed(() => route.query.showParagraph === 'true')
 
-const route = useRoute()
-const showParagraph = computed(() => route.query.showParagraph === 'true')
-
-onMounted(spill1);
+  onMounted(() => {
+    nav();
+  });
 
 
+  function nav() {
+    if (showParagraph.value == true) {
+        const next = Math.floor(Math.random() * 2);
+        if (next === 0) {
+        navigateTo('/spill/doordrink/1player?showParagraph=true');
+        } else if (next === 1) {
+            navigateTo('/spill/doordrink/2player?showParagraph=true');
+        } else {
+        navigateTo('/');}
+    
+    } else {
 
-//random farger
-function generateRandomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256); 
-  const b = Math.floor(Math.random() * 256); 
-  return `rgb(${r},${g},${b})`; 
-}
-//@ts-ignore
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-//bakgrunssfarge endrer og viser spillsiden
-async function spill1() {
-  const originalBackgroundColor = document.body.style.backgroundColor;
-  if (showParagraph.value == true) {
-    navigateTo('/spill/playername?showParagraph=true');
-  } else {
-  navigateTo('/spill/playername');}
-  let bg = 0;
-  while (bg < 10) {
-    document.body.style.backgroundColor = generateRandomColor();
-    await sleep(500);
-    bg++;
+    const next = Math.floor(Math.random() * 2);
+    if (next === 0) {
+      navigateTo('/spill/doordrink/1player');
+    } else if (next === 1) {
+        navigateTo('/spill/doordrink/2player');
+    } else {
+      navigateTo('/');}
   }
-  document.body.style.backgroundColor = originalBackgroundColor;
-  if (showParagraph.value == true) {
-    navigateTo('/spill/doordrink/game?showParagraph=true');
-  } else {
-  navigateTo('/spill/doordrink/game');}
-}
+  }
 
-</script>
+  </script>
+  

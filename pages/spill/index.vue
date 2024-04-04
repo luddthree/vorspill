@@ -51,7 +51,7 @@
         <p class="text-sm mb-4">Jeg er klar til å spille!</p>
         
         <NuxtLink v-if="!felles" to="/games" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Start spill</NuxtLink>
-        <NuxtLink v-if="felles" to="/spill/felles" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Tilbake</NuxtLink>
+        <NuxtLink v-if="felles" to="/spill/felles/text2" class="text-white text-xl rounded bg-blue-500 py-3 px-32">Tilbake</NuxtLink>
 
       </div>
 

@@ -17,11 +17,13 @@
 
       <button @click="spill5()" class="animate-button rounded text-white mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Drikk</button>
 
-      <button @click="spill6()" class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Fellesfitta</button>
+      <button @click="spill6()" class="animate-button rounded text-white mt-4 rotate-1 transition ease-in-out delay-50 bg-sky-600 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Fellesfitta</button>
 
-      <button @click="mix()" class="animate-button rounded text-white mt-16 font-bold rotate-0 transition ease-in-out delay-50 bg-pink-500 py-4 px-20 text-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
 
     </div>
+    <div class="text-center text-white fixed inset-x-0 bottom-28">
+      <button @click="mix()" class="animate-button rounded text-white mt-16 font-bold rotate-0 transition ease-in-out delay-50 bg-pink-500 py-4 px-20 text-3xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
+</div>
 
   </template>
   
