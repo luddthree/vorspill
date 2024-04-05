@@ -1,20 +1,16 @@
 <template>
-  <div class="flex justify-center items-center mt-40">
-      <!-- The `id` attribute is necessary for the YouTube API to target the iframe -->
+  <div class="min-h-screen flex items-center justify-center">
       <iframe id="youtube-player" width="370" height="230" src="https://www.youtube.com/embed/gHs2Ucs3Dog?enablejsapi=1" allow="autoplay; fullscreen" frameborder="0"></iframe>
   </div>
   
   <div class="text-center">
-      <!-- Use `v-if` to conditionally render the button based on whether the video has ended -->
-      <!-- <button v-if="videoEnded" @click="skip" class="rounded bg-green-500 p-3 mt-10 px-20">Gå tilbake</button> -->
+
     <div class="text-center text-white fixed inset-x-0 bottom-16">
-      <button v-if="!videoEnded" @click="skip" class="rounded bg-blue-900 py-4 mt-10 px-20">Jeg er for feig, skip</button>
+      <button v-if="!videoEnded" @click="skip" class="rounded font-bold text-lg py-4 mt-10 px-20">Jeg er for feig, skip</button>
     </div>
       <div>
-    <!-- <NuxtLink v-if="videoEnded" to="/games" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink> -->
     <button v-if="videoEnded" @click="skip" class="w-full h-full absolute"style="z-index: 1;"></button>
 
-    <!-- <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink> -->
     </div>
 
     <div class="text-center text-white fixed inset-x-0 bottom-16">
@@ -30,7 +26,7 @@
   
   const router = useRouter();
   const route = useRoute();
-  const videoEnded = ref(false); // This ref will control the visibility of the button
+  const videoEnded = ref(false); 
   
   // Load the YouTube IFrame Player API code asynchronously
   onMounted(() => {

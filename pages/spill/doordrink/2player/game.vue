@@ -39,8 +39,7 @@
 
   const randomString = ref('');
   const stringList = ['bytt drikke de neste 2 rundene', 'bytt drikke de neste 3 rundene',
-   'kyss hverandre på munnen', 'bytt plass resten av spillet', 'en av dere må drikke resten av drinken',
-   '']; 
+   'kyss hverandre på munnen', 'bytt plass resten av spillet', 'en av dere må drikke resten av drinken']; 
 
   const velgslurker = ref(''); 
   const slurker = ['2', '3', '4', '5']; 
