@@ -21,10 +21,11 @@
 
       <button @click="spill7()" class="animate-button rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Gjett og drikk</button>
 
+      <button @click="mix()" class="animate-button rounded text-white mt-10 font-bold rotate-0 transition mb-10 ease-in-out delay-50 bg-pink-500 py-4 px-16 text-4xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
+
+
     </div>
-    <div class="text-center text-white fixed inset-x-0 bottom-30">
-      <button @click="mix()" class="animate-button rounded text-white mt-16 font-bold rotate-0 transition ease-in-out delay-50 bg-pink-500 py-4 px-16 text-4xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
-</div>
+
 
   </template>
   

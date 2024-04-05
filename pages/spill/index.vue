@@ -47,7 +47,7 @@
     </div>
 
 
-    <div class=" bg-sky-950 text-center text-white fixed inset-x-0 bottom-16">
+    <div class=" bg-sky-950 text-center text-white fixed inset-x-0 bottom-10">
         <p class="text-sm mb-2 mt-1">Jeg er klar til å spille!</p>
         
         <NuxtLink v-if="!felles" to="/games" class="text-white ml-2 text-xl rounded bg-blue-500 py-3 px-28 inline-flex">Start spill 
