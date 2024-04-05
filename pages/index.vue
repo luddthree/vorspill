@@ -32,6 +32,7 @@
                 <p>Spillere:</p>
             </div>
             
+            <ul class="flex justify-center flex-wrap">
 
             <li v-for="(player, index) in players" :key="index" @click="deletePlayer(index)" class="justify-between items-center bg-slate-800 rounded-lg cursor-pointer hover:text-red-600 text-white mb-2 py-1 px-4 space-x-2 inline-flex ml-1 mr-1 text-center">
   <span class="text-lg flex-1 py-0.5">{{ player }}</span>
@@ -41,7 +42,7 @@
     <line x1="6" y1="6" x2="18" y2="18" />
   </svg>
 </li>
-
+</ul>
 
 
           </ul>

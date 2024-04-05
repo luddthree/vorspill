@@ -6,7 +6,7 @@
         </NuxtLink>
     </div>
   
-    <div class=" text-center mt-8 font-bold">
+    <div class=" text-center mt-2 font-bold">
     <button  @click="spill1()" class="animate-button rounded mt-4 rotate-1 text-orange-900 transition ease-in-out delay-50 bg-orange-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-600 duration-50 ...">Gjør eller drikk</button>
   
       <button @click="spill2()" class="animate-button rounded mt-4 -rotate-1 text-red-900 transition ease-in-out delay-50 bg-red-600 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-50 ...">Flasketuten</button>
