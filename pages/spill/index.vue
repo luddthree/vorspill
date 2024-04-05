@@ -36,6 +36,10 @@
         </div>
     </div>
     <div>
+        <h1 class="shead">Gjett og drikk</h1>
+        <p class="stext">DU velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å drikke, gjetter du feil må du drikke en slurk. Den riktige fargen er helt tilfeldig.</p>
+    </div>
+    <div>
         <h1 class="shead">Drikk slurker</h1>
         <p class="stext">Spilleren må drikke antallet slurker fra drikken sin.</p>
     </div>
