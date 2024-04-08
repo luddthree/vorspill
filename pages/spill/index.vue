@@ -21,15 +21,11 @@
         <p class="stext">Hvis du har gjort det som kommer opp på skjermen må du ta en slurk, her kan flere spillere måtte ta slurker.</p>
     </div>
     <div>
-        <h1 class="shead">Drikk</h1>
+        <h1 class="shead">Slurk</h1>
         <p class="stext">En spiller blir bedt om å drikke et tilfeldig antall slurker.</p>
     </div>
     <div>
-        <h1 class="shead">Litt av hvert</h1>
-        <p class="stext">Dette er en blanding av alle spillene over, der man ikke vet hva som blir det neste spillet.</p>
-    </div>
-    <div>
-        <h1 class="shead">Fellesfitta</h1>
+        <h1 class="shead">Felles</h1>
         <p class="stext">Spilleren må ta en slurk fra drikken sin hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
         <div class="flex items-center justify-center mt-1">
         <iframe src="https://www.youtube.com/embed/iMRITRuseq4?si=-qT_5zeK02S0c9Ub&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -37,7 +33,11 @@
     </div>
     <div>
         <h1 class="shead">Gjett og drikk</h1>
-        <p class="stext">DU velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å drikke, gjetter du feil må du drikke en slurk. Den riktige fargen er helt tilfeldig.</p>
+        <p class="stext">Du velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å drikke, gjetter du feil må du drikke en slurk. Den riktige fargen er helt tilfeldig.</p>
+    </div>
+    <div>
+        <h1 class="shead">Litt av hvert</h1>
+        <p class="stext">Dette er en blanding av alle spillene over, der man ikke vet hva som blir det neste spillet.</p>
     </div>
     <div>
         <h1 class="shead">Drikk slurker</h1>

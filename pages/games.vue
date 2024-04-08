@@ -15,9 +15,9 @@
   
       <button @click="spill4()" class="animate-button rounded text-green-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
 
-      <button @click="spill5()" class="animate-button rounded text-teal-800 mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Drikk</button>
+      <button @click="spill5()" class="animate-button rounded text-teal-800 mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Slurk</button>
 
-      <button @click="spill6()" class="animate-button rounded text-blue-900 mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Fellesfitta</button>
+      <button @click="spill6()" class="animate-button rounded text-blue-900 mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Felles</button>
 
       <button @click="spill7()" class="animate-button rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Gjett og drikk</button>
 
