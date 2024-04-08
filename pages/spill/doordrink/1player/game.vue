@@ -44,7 +44,8 @@
   'Vipps 100kr til 90550266', 'La alle få kile deg i 20 sek', 'Dra hjem', 'bytt klær med en i rommet', 
   'La de andre gå igjennom telefonen din', 'pek på den du kunne banket i en slosskamp', 'si en hemmelighet du aldri har fortalt noen',
   'hvilken person i rommet har du mest lyst til å kysse', 'hvem i rommer ser ut som de har minst penis', 'stå på henda i 5 sekunder',
-  'Dans en fortnite dans', 'hvem i rommet er den dårligste vennen', 'hvem i rommet hadde du brydd deg minst om døde']; 
+  'Dans en fortnite dans', 'hvem i rommet er den dårligste vennen', 'hvem i rommet hadde du brydd deg minst om døde',
+  'la en annen slappe deg på rumpa', 'hvis du måtte hatt sex med et dyr, hvilket?', 'hvem i rommet ville du helt gitt oralsex?']; 
 
   const velgslurker = ref(''); 
   const slurker = ['2', '3', '4', '5']; 
