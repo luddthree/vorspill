@@ -16,7 +16,7 @@
 
     <div v-if="waitString">
     <NuxtLink v-if="!showParagraph" to="/spill/jegharaldri" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
-    <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
+    <NuxtLink v-if="showParagraph" to="/spill/mix?jegharaldri=true" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
     </div></div>
 
     <div v-if="waitString" class="text-center text-white fixed inset-x-0 bottom-16">

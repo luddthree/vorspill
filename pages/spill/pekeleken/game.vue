@@ -18,7 +18,7 @@
     </div>
 
     <NuxtLink v-if="counter <= 0 && !showParagraph" to="/spill/pekeleken" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
-    <NuxtLink v-if="counter <= 0 && showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
+    <NuxtLink v-if="counter <= 0 && showParagraph" to="/spill/mix?pekeleken=true" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
   </div>
 
 

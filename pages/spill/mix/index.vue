@@ -1,91 +1,55 @@
 <template>
-    <div></div>
+  <div></div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+
+const route = useRoute();
+const router = useRouter();
+
+const flasketut = computed(() => route.query.flasketut === 'true');
+const felles = computed(() => route.query.felles === 'true'); 
+const doordrink = computed(() => route.query.doordrink === 'true');
+const jegharaldri = computed(() => route.query.jegharaldri === 'true');
+const pekeleken = computed(() => route.query.pekeleken === 'true');
+const slurk = computed(() => route.query.slurk === 'true');
+const gjett = computed(() => route.query.gjett === 'true');
+
+// console.log(flasketut.value, doordrink.value, jegharaldri.value, pekeleken.value, slurk.value, gjett.value);
 
 onMounted(() => {
-  nav();
+nav();
 });
 
-
 function nav() {
-  const next = Math.floor(Math.random() * 100);
-  if (next < 12) {         // 12% chance
-    console.log('flasketut');
-    navigateTo('/spill/flasketut?showParagraph=true');
-  } else if (next < 14) {  // 2% chance
-    console.log('felles');
-    navigateTo('/spill/felles?showParagraph=true');
-  } else if (next < 34) {  // 20% chance
-    console.log('gkør eller drikk');
-    navigateTo('/spill/doordrink?showParagraph=true');
-  } else if (next < 51) {  // 17% chance
-    console.log('jeg ah aldri');
-    navigateTo('/spill/jegharaldri?showParagraph=true');
-  } else if (next < 70) {  // 19% chance
-    console.log('pekeleken');
-    navigateTo('/spill/pekeleken?showParagraph=true');
-  } else if (next < 85) {  // 15% chance
-    console.log('slurk');
-    navigateTo('/spill/sips?showParagraph=true');
-  } else if (next < 100) { // 15% chance
-    console.log('gjett');
-    navigateTo('/spill/gjett?showParagraph=true');
-    
-  } else {
-    navigateTo('/'); 
+let next, selectedRoute;
+do {
+  next = Math.floor(Math.random() * 100);
+  if (next < 12 && !flasketut.value) {
+    selectedRoute = '/spill/flasketut?showParagraph=true';
+  } else if (next < 14 && !felles.value) {
+    selectedRoute = '/spill/felles?showParagraph=true';
+  } else if (next < 34 && !doordrink.value) {
+    selectedRoute = '/spill/doordrink?showParagraph=true';
+  } else if (next < 51 && !jegharaldri.value) {
+    selectedRoute = '/spill/jegharaldri?showParagraph=true';
+  } else if (next < 70 && !pekeleken.value) {
+    selectedRoute = '/spill/pekeleken?showParagraph=true';
+  } else if (next < 85 && !slurk.value) {
+    selectedRoute = '/spill/sips?showParagraph=true';
+  } else if (next < 100 && !gjett.value) {
+    selectedRoute = '/spill/gjett?showParagraph=true';
+  } else if (next >= 100) {
+    selectedRoute = '/';
   }
+  console.log(next)
+} while (!selectedRoute); 
+
+if (selectedRoute) {
+  console.log('Navigating to:', selectedRoute);
+  router.push(selectedRoute);
+}
 }
 </script>
-
-<!-- <script setup lang="ts">
-import { onMounted } from 'vue';
-
-onMounted(() => {
-  nav();
-});
-
-function nav() {
-  let next = Math.floor(Math.random() * 100);
-  const lastPage = localStorage.getItem('lastNavPath');
-
-  function selectNewPath() {
-    if (next < 12) {         // 12% chance
-      console.log('flasketut');
-      return '/spill/flasketut?showParagraph=true';
-    } else if (next < 14) {  // 2% chance
-      console.log('flasketut');
-      return '/spill/felles?showParagraph=true';
-    } else if (next < 34) {  // 20% chance
-      console.log('gkør eller drikk');
-      return '/spill/doordrink?showParagraph=true';
-    } else if (next < 51) {  // 17% chance
-      console.log('jeg ah aldri');
-      return '/spill/jegharaldri?showParagraph=true';
-    } else if (next < 70) {  // 19% chance
-      console.log('pekeleken');
-      return '/spill/pekeleken?showParagraph=true';
-    } else if (next < 85) {  // 15% chance
-      console.log('slurk');
-      return '/spill/sips?showParagraph=true';
-    } else if (next < 100) { // 15% chance
-      console.log('gjett');
-      return '/spill/gjett?showParagraph=true';
-    } else {
-      return '/';
-    }
-  }
-
-  let newPath = selectNewPath();
-
-  while (newPath === lastPage) {
-    next = Math.floor(Math.random() * 100); 
-    newPath = selectNewPath(); 
-  }
-
-  localStorage.setItem('lastNavPath', newPath); 
-  navigateTo(newPath); 
-}
-</script> -->

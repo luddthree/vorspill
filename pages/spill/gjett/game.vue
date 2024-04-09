@@ -22,7 +22,7 @@
 
     
     <NuxtLink v-if="!showParagraph" to="/spill/gjett" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
-    <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
+    <NuxtLink v-if="showParagraph" to="/spill/mix?gjett=true" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
   </div>
 
   <div class="text-center text-white fixed inset-x-0 bottom-16">

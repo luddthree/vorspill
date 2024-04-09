@@ -18,7 +18,7 @@
     </div>
 
     <NuxtLink v-if="!showParagraph" to="/spill/doordrink" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
-    <NuxtLink v-if="showParagraph" to="/spill/mix" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
+    <NuxtLink v-if="showParagraph" to="/spill/mix?doordrink=true" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
 
     </div>
 
