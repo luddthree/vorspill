@@ -37,7 +37,9 @@ const showParagraph = computed(() => route.query.showParagraph === 'true')
   'fantasert om noen i rommet', 'prøvd å suge meg selv', 
   'ligget med noen i rommet', 'drept noen', 'trudd jeg var homo', 
   'smakt på mitt eget tiss', 'onanert til noen i rommet', 'snitcha på noen i rommet',
-  'spillt dette spillet', 'banket opp noen' ]; 
+  'spillt dette spillet', 'banket opp noen', 'Jeg har aldri gått mer enn tre dager uten å dusje.',
+  'mistet lappen', 'løyet til noen i rommet', 'fantasert om kjæresten til noen i rommet', 
+  'krangla med noen i rommet', 'misslikt noen i rommet']; 
   
   const waitString = ref(false);
 

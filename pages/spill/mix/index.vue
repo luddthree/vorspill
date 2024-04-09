@@ -27,19 +27,19 @@ function nav() {
 let next, selectedRoute;
 do {
   next = Math.floor(Math.random() * 100);
-  if (next < 12 && !flasketut.value) {
+  if (next <= 12 && !flasketut.value) {
     selectedRoute = '/spill/flasketut?showParagraph=true';
-  } else if (next < 14 && !felles.value) {
+  } else if (next <= 13 && !felles.value) {
     selectedRoute = '/spill/felles?showParagraph=true';
-  } else if (next < 34 && !doordrink.value) {
+  } else if (next <= 34 && !doordrink.value) {
     selectedRoute = '/spill/doordrink?showParagraph=true';
-  } else if (next < 51 && !jegharaldri.value) {
+  } else if (next <= 51 && !jegharaldri.value) {
     selectedRoute = '/spill/jegharaldri?showParagraph=true';
-  } else if (next < 70 && !pekeleken.value) {
+  } else if (next <= 70 && !pekeleken.value) {
     selectedRoute = '/spill/pekeleken?showParagraph=true';
-  } else if (next < 85 && !slurk.value) {
+  } else if (next <= 85 && !slurk.value) {
     selectedRoute = '/spill/sips?showParagraph=true';
-  } else if (next < 100 && !gjett.value) {
+  } else if (next <= 100 && !gjett.value) {
     selectedRoute = '/spill/gjett?showParagraph=true';
   } else if (next >= 100) {
     selectedRoute = '/';

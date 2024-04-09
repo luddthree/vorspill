@@ -16,6 +16,11 @@
     <NuxtLink v-if="showParagraph" to="/spill/mix?flasketut=true" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink>
 </div>
 
+<div v-if="spm" class="text-center text-white fixed inset-x-0 top-20">
+  <p class="text-sm">Den flasketuten peker på </p>
+  <p class="text-lg font-bold">{{ spm }}</p>
+</div>
+
 <div v-if="spinCompleted" class="text-center text-white fixed inset-x-0 bottom-16">
         <p  v-if="!showParagraph" class="text-xs">Trykk på skjermen for å spille igjen</p>
         <p  v-if="showParagraph" class="text-xs">Trykk på skjermen for å gå videre</p>
@@ -26,6 +31,7 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router'
 
+const spm = ref('');
 const route = useRoute()
 const showParagraph = computed(() => route.query.showParagraph === 'true')
 
@@ -57,6 +63,10 @@ onMounted(() => {
     }
   `;
   document.head.appendChild(styleSheet);
+
+  spinCompleted.value = true; // Assuming this is set after your animation logic
+  spm.value = localStorage.getItem('spm'); // Retrieve the random string
+
 });
 
   </script>

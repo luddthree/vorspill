@@ -43,7 +43,7 @@
   'er mest sannsynlig til å bli kjendis', 'er mest sannsynlig til å bli president', 
   'er mest sannsynlig til å bli en seriemorder', 'er mest sannsynlig til å bli en pornostjerne',
   'er mest sannsynlig til å bli en narkoman', 'er mest sannsynlig til å bli en alkoholiker',
-  'kommer til å dø først'];
+  'kommer til å dø først', 'kommer til å dø sist', 'er minst populær blandt motsatte kjønn',];
   
   const counter = ref(7); 
   

@@ -17,9 +17,11 @@
   'må drikke 4 slurker!', 'kan stå over neste runde', 'må dra hjem']; 
   
   function pickRandomString() {
-    const randomIndex = Math.floor(Math.random() * stringList.length); 
-    randomString.value = stringList[randomIndex]; 
-  }
+  const randomIndex = Math.floor(Math.random() * stringList.length); 
+  randomString.value = stringList[randomIndex];
+  localStorage.setItem('spm', randomString.value);  // Store the random string
+}
+
   
   onMounted(pickRandomString); 
   </script>
