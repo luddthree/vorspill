@@ -1,0 +1,7 @@
+{
+  "appId": "no.vorspill",
+  "appName": "Vorspill",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
+
