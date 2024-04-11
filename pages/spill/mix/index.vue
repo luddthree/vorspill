@@ -26,9 +26,9 @@ nav();
 function nav() {
 let next, selectedRoute;
 do {
-  next = Math.floor(Math.random() * 10);
+  next = Math.floor(Math.random() * 100);
   if (next <= 12 && !flasketut.value) {
-    selectedRoute = '/spill/felles?showParagraph=true';
+    selectedRoute = '/spill/flasketut?showParagraph=true';
   } else if (next <= 13 && !felles.value) {
     selectedRoute = '/spill/felles?showParagraph=true';
   } else if (next <= 34 && !doordrink.value) {
