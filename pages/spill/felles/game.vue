@@ -13,8 +13,12 @@
 
     </div>
 
+    <button v-if="videoEnded && !showParagraph" @click="skip()" class="w-full h-full absolute" style="z-index: 1;"></button>
+    <button v-if="videoEnded && showParagraph" @click="next()" class="w-full h-full absolute" style="z-index: 1;"></button>
+
     <div class="text-center text-white fixed inset-x-0 bottom-16">
-        <p  v-if="videoEnded" class="text-xs">Trykk på skjermen for å gå tilbake</p>
+      <p v-if="videoEnded && !showParagraph" class="text-xs">Trykk på skjermen for å gå tilbake</p>
+        <p  v-if="videoEnded && showParagraph" class="text-xs">Trykk på skjermen for å gå videre</p>
         </div>
 
   </div>
@@ -27,7 +31,8 @@
   const router = useRouter();
   const route = useRoute();
   const videoEnded = ref(false); 
-  
+  const showParagraph = computed(() => route.query.showParagraph === 'true');
+
   // Load the YouTube IFrame Player API code asynchronously
   onMounted(() => {
       let tag = document.createElement('script');
@@ -53,10 +58,9 @@
   });
   
 
-  
 
 
-const showParagraph = computed(() => route.query.showParagraph === 'true')
+
 
 onMounted(bak);
 
@@ -84,11 +88,16 @@ async function bak() {
     
   }
   document.body.style.backgroundColor = originalBackgroundColor;
+
 }
 
 async function skip() {
   bg = true;
   navigateTo('/games');
-//   navigateTo('/spill/felles/game?showParagraph=true');
+}
+
+async function next() {
+  bg = true;
+  navigateTo('/spill/mix?felles=true');
 }
 </script>

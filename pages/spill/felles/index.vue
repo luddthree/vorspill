@@ -29,7 +29,7 @@ function sleep(ms) {
 async function spill2() {
   const originalBackgroundColor = document.body.style.backgroundColor;
   if (showParagraph.value == true) {
-    navigateTo('/spill/everyone');
+    navigateTo('/spill/everyone?showParagraph=true');
   } else {
   navigateTo('/spill/everyone');}
   let bg = 0;
@@ -40,7 +40,7 @@ async function spill2() {
   }
   document.body.style.backgroundColor = originalBackgroundColor;
   if (showParagraph.value == true) {
-    navigateTo('/spill/felles/text');
+    navigateTo('/spill/felles/text?showParagraph=true');
   } else {
   navigateTo('/spill/felles/text');}
   let bg2 = 0;
@@ -51,7 +51,7 @@ async function spill2() {
   }
   document.body.style.backgroundColor = originalBackgroundColor;
   if (showParagraph.value == true) {
-    navigateTo('/spill/felles/text2');
+    navigateTo('/spill/felles/text2?showParagraph=true');
   } else {
   navigateTo('/spill/felles/text2');}
 
