@@ -3,7 +3,6 @@ workflows:
     name: Vorspill
     labels:
       - QA
-      - ${TENANT_NAME}
     instance_type: mac_mini_m1
     max_build_duration: 60
     environment:
@@ -23,7 +22,6 @@ workflows:
         - pattern: '*'
           include: true
           source: true
-      cancel_previous_builds: false
     scripts:
       - ...
     artifacts:
