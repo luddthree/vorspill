@@ -1,20 +1,15 @@
-# Workflow identifier
 workflows:
   ios-app:
     name: Vorspill
     environment:
       vars:
-        XCODE_WORKSPACE: "vorspill.xcworkspace" # Specify your workspace file
-        XCODE_SCHEME: "vorspill" # Specify your scheme name
-        XCODE_PROJECT: "vorspill.xcodeproj" # Specify your project file, if you don't use a workspace
+        XCODE_WORKSPACE: "vorspill.xcworkspace"
+        XCODE_SCHEME: "vorspill"
+        XCODE_PROJECT: "vorspill.xcodeproj"  # This line can be removed if you're using a workspace
 
-    # Define which instance type to use
     instance_type: mac_mini_m1
-
-    # Specify the Xcode version.
     xcode: latest
 
-    # Triggering conditions
     triggering:
       events:
         - push
@@ -23,26 +18,20 @@ workflows:
           include: true
           source: true
 
-    # Scripts to run before the main build
     scripts:
-      # Install dependencies
       - name: Install dependencies
         script: |
-          echo "Install CocoaPods"
+          echo "Installing CocoaPods"
           pod install
-
-    # Building the app
-    scripts:
       - name: Build ipa for distribution
         script: |
           xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="iPhone Distribution" PROVISIONING_PROFILE="xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
-    # Publishing the app
     publishing:
       app_store_connect:
-        apple_id: luddetv@gmail.com # Your Apple ID
-        # password: @env:APP_SPECIFIC_PASSWORD 
-        app_identifier: "no.vorspill" # Bundle Identifier
+        apple_id: luddetv@gmail.com
+        password: @env:APP_SPECIFIC_PASSWORD  # Ensure you have set this in your environment variables on CodeMagic
+        app_identifier: "no.vorspill"
         submit_to_app_store: true
         release_type: SCHEDULED
-        # scheduled_release_date: "2023-05-01T14:00:00Z"
+        # scheduled_release_date: "2023-05-01T14:00:00Z" # Uncomment and set this if needed
