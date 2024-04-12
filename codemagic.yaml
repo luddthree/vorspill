@@ -64,3 +64,4 @@ workflows:
         # Configuration related to App Store (optional)
         # Note: This action is performed during post-processing.
         submit_to_app_store: false
+
