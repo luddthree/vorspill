@@ -25,7 +25,8 @@ workflows:
           # npx cap copy
           #
           # to update native dependencies, use this command:
-          npx cap sync
+          # npx cap sync
+          npx cap migrate
       - name: Set up code signing settings on Xcode project
         script: | 
           xcode-project use-profiles
