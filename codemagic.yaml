@@ -15,8 +15,8 @@ workflows:
     cache:
       cache_paths:
         - ~/.pub-cache
-    intergtations:
-      app_store_connect: codemagicapikry
+    # intergtations:
+    #   app_store_connect: codemagicapikry
     triggering:
       events:
         - push
