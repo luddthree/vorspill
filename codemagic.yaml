@@ -2,13 +2,14 @@ workflows:
   ios-app:
     name: Vorspill
     environment:
+      xcode: latest
       vars:
         XCODE_WORKSPACE: "vorspill.xcworkspace"
         XCODE_SCHEME: "vorspill"
         XCODE_PROJECT: "vorspill.xcodeproj"  # This line can be removed if you're using a workspace
 
     instance_type: mac_mini_m1
-    xcode: latest
+    
 
     triggering:
       events:
