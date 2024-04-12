@@ -30,7 +30,7 @@ workflows:
     publishing:
       app_store_connect:
         apple_id: luddetv@gmail.com
-        password: @env:APP_SPECIFIC_PASSWORD  # Ensure you have set this in your environment variables on CodeMagic
+        # password: @env:APP_SPECIFIC_PASSWORD  # Ensure you have set this in your environment variables on CodeMagic
         app_identifier: "no.vorspill"
         submit_to_app_store: true
         release_type: SCHEDULED
