@@ -1,38 +1,29 @@
 workflows:
-  my-workflow:
-    name: Vorspill
-    labels:
-      - QA
-    instance_type: mac_mini_m1
-    max_build_duration: 60
+  capacitor-build:
+    name: Nuxt3 + Capacitor App
     environment:
-      groups:
-        - vors
       vars:
-        PUBLIC_ENV_VAR: "vors"
-      flutter: stable
-      xcode: latest
-    cache:
-      cache_paths:
-        - ~/.pub-cache
-    # intergtations:
-    #   app_store_connect: codemagicapikry
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: '*'
-          include: true
-          source: true
+        # Define any environment variables needed
+      node: latest
+    scripts:
+      - name: Install Dependencies
+        script: |
+          npm install
+      - name: Build Nuxt3 Project
+        script: |
+          npm run build
+      - name: Add Capacitor Platforms
+        script: |
+          npx cap add android
+          npx cap add ios
+      - name: Copy Web Assets to Capacitor
+        script: |
+          npx cap copy
+      - name: Build iOS and Android
+        script: |
+          npx cap open ios
+          npx cap open android
     artifacts:
-      - build/**/outputs/bundle/**/*.aab
-    publishing:
-      app_store_connect:
-        auth: intergration
-        # submit_to_testflight: false
-        submit_to_app_store: true
-      email:
-        recipients:
-          - luddetv@gmail.com
-      scripts:
-        - echo 'Post-publish script'
+      - android/app/build/outputs/**/*.apk
+      - ios/DerivedData/**/Build/Products/**/*.ipa
+    # Define triggers, caching, publishing options as needed
