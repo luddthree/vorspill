@@ -10,8 +10,8 @@ workflows:
         distribution_type: app_store
       vars:
         APP_STORE_APPLE_ID: 6497332257
-        XCODE_WORKSPACE: "App.xcworkspace"
-        XCODE_SCHEME: "App"
+        XCODE_WORKSPACE: "Vorspill.xcworkspace"
+        XCODE_SCHEME: "Vorspill"
     scripts:
       - name: Install npm dependencies for Ionic Capacitor project
         script: | 
