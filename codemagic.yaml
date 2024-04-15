@@ -6,12 +6,16 @@ workflows:
       app_store_connect: Vorspill
     environment:
       ios_signing:
+        provisioning_profiles:
+          - no.ludvik.app
+        certificates:
+          - no.ludvik.app
         bundle_identifier: no.ludvik.app
         distribution_type: app_store
       vars:
         APP_STORE_APPLE_ID: 6497332257
-        XCODE_WORKSPACE: "vorspill.xcworkspace"
-        XCODE_SCHEME: "vorspill"
+        XCODE_WORKSPACE: "App.xcworkspace"
+        XCODE_SCHEME: "App"
     scripts:
       - name: Install npm dependencies for Ionic Capacitor project
         script: | 
