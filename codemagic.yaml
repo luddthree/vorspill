@@ -3,13 +3,13 @@ workflows:
     name: iOS Workflow
     max_build_duration: 120
     integrations:
-      app_store_connect: no.ludvik.app
+      app_store_connect: Vorspill
     environment:
       ios_signing:
         bundle_identifier: no.ludvik.app
         distribution_type: app_store
       vars:
-        APP_STORE_APPLE_ID: 6497331596
+        APP_STORE_APPLE_ID: 6497332257
         XCODE_WORKSPACE: "App.xcworkspace"
         XCODE_SCHEME: "App"
     scripts:
