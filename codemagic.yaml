@@ -6,7 +6,7 @@ workflows:
       app_store_connect: Vorspill
     environment:
       ios_signing:
-        distribution_type: app_store
+        distribution_type: development
         bundle_identifier: Vorspill
       vars:
         APP_STORE_APPLE_ID: 1555555551
