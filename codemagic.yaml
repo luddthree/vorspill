@@ -1,7 +1,7 @@
 workflows:
   ios-method-1:
     name: iOS signing method 1 workflow
-    envroment:
+    # envroment:
       # ios_signing:
       #   distribution_type: app_store
       #   bundle_identifier: com.example.app
