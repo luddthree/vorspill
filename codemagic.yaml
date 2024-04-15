@@ -6,7 +6,7 @@ workflows:
       app_store_connect: no.ludvik.app
     environment:
       ios_signing:
-        bundle_identifier: no.ludvik.app
+        bundle_identifier: no.ludvik.vorspill
         distribution_type: app_store
       vars:
         APP_STORE_APPLE_ID: 6497171485
