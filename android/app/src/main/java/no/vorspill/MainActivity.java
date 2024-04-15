@@ -1,4 +1,4 @@
-package no.vorspill;
+package no.ludvik.app;
 
 import com.getcapacitor.BridgeActivity;
 
