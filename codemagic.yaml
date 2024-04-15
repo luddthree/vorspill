@@ -10,7 +10,6 @@ workflows:
           - "Vorspill"
         certificates:
           - "vorspill"
-   
       vars:
         APP_STORE_APPLE_ID: 6497171485
         XCODE_WORKSPACE: "App.xcworkspace"
@@ -30,8 +29,12 @@ workflows:
           # to update native dependencies, use this command:
           # npx cap sync
           npx cap migrate
+      - name: "Keychain Initialize"
+        script: cd . && keychain initialize
+      - name: "Keychain Add Certificates"
+        script: cd . && keychain add-certificates
       - name: Set up code signing settings on Xcode project
-        script: | 
+        script: |
           xcode-project use-profiles
       - name: Increment build number
         script: | 
