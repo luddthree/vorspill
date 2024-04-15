@@ -6,10 +6,6 @@ workflows:
       app_store_connect: Vorspill
     environment:
       ios_signing:
-        provisioning_profiles:
-          - no.ludvik.app
-        certificates:
-          - no.ludvik.app
         bundle_identifier: no.ludvik.app
         distribution_type: app_store
       vars:
