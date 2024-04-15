@@ -22,7 +22,7 @@ workflows:
       - name: Update dependencies and copy web assets to native project
         script: | 
           # if you don't need to update native dependencies, use this:
-          px cap copy
+          npx cap copy
           #
           # to update native dependencies, use this command:
           # npx cap sync
