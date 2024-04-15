@@ -6,11 +6,8 @@ workflows:
       app_store_connect: Vorspill
     environment:
       ios_signing:
-        provisioning_profiles:
-          - "Vorspill"
-        certificates:
-          - "vorspill"
-        bundle_identifier: Vorspill
+        bundle_identifier: vorspill
+        distribution_type: app_store
       vars:
         APP_STORE_APPLE_ID: 6497171485
         XCODE_WORKSPACE: "App.xcworkspace"
