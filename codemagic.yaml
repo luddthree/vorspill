@@ -22,11 +22,11 @@ workflows:
       - name: Update dependencies and copy web assets to native project
         script: | 
           # if you don't need to update native dependencies, use this:
-          # npx cap copy
+          px cap copy
           #
           # to update native dependencies, use this command:
           # npx cap sync
-          npx cap migrate
+          # npx cap migrate
       - name: "Keychain Initialize"
         script: cd . && keychain initialize
       - name: "Keychain Add Certificates"
