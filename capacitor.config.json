@@ -1,5 +1,5 @@
 {
-  "appId": "no.vorspill.app",
+  "appId": "no.ludvik.vorspill",
   "appName": "Vorspill",
   "webDir": "dist",
   "bundledWebRuntime": false

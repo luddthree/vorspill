@@ -3,10 +3,10 @@ workflows:
     name: iOS Workflow
     max_build_duration: 120
     integrations:
-      app_store_connect: Vorspill
+      app_store_connect: no.ludvik.vorspill
     environment:
       ios_signing:
-        bundle_identifier: Vorspill
+        bundle_identifier: no.ludvik.vorspill
         distribution_type: app_store
       vars:
         APP_STORE_APPLE_ID: 6497171485
