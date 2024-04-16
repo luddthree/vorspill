@@ -16,6 +16,9 @@ workflows:
       - name: Install npm dependencies for Ionic Capacitor project
         script: | 
           npm install
+      - name: Build app
+        script: | 
+          npm run build
       - name: Cocoapods installation
         script: | 
           cd ios/App && pod install
