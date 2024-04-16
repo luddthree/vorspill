@@ -11,7 +11,7 @@ workflows:
       vars:
         APP_STORE_APPLE_ID: 6497332257
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
-        XCODE_SCHEME: "project"
+        XCODE_SCHEME: "App"
     scripts:
       - name: Install npm dependencies for Ionic Capacitor project
         script: | 
@@ -22,10 +22,10 @@ workflows:
       - name: Update dependencies and copy web assets to native project
         script: | 
           # if you don't need to update native dependencies, use this:
-          npx cap copy
+          #npx cap copy
           #
           # to update native dependencies, use this command:
-          # npx cap sync
+          npx cap sync
           # npx cap migrate
       - name: "Keychain Initialize"
         script: cd . && keychain initialize
