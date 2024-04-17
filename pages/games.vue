@@ -1,6 +1,6 @@
 <template>
   
-    <div class="text-center font-bold mt-3">
+    <div class="text-center font-bold mt-10">
         <NuxtLink to="/">
             <img src="/vorsspill.png" alt="logo" class="w-1/4 h-1/4 mx-auto">
         </NuxtLink>
