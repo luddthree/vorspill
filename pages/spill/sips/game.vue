@@ -1,9 +1,9 @@
 <template>
     <div class="min-h-screen flex flex-col items-center justify-center text-white">
       <div v-if="velgslurker" class="text-center font-bold">
-        <p class="text-2xl mb-2">Må drikke</p>
+        <p class="text-2xl mb-2">Må ta</p>
         
-        <p class="text-3xl">{{ velgslurker }} slurker!</p>
+        <p class="text-3xl">{{ velgslurker }} pushups!</p>
 
 
       </div>

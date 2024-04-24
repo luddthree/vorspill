@@ -47,10 +47,10 @@ const randomBoolean = Math.random() < 0.5;
 
 function color() {
   if ((randomBoolean && farge.value) || (!randomBoolean && !farge.value)) {
-    msg.value = "riktig, du slipper å drikke!";
+    msg.value = "riktig, du slipper å ta en pushup!";
     svar.value = true; 
   } else {
-    msg.value = "feil, du må drikke en slurk!";
+    msg.value = "feil, du må ta en pushup!";
     svar.value = false; 
   }
 }
