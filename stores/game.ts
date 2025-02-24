@@ -8,7 +8,7 @@ export const useGameStore = defineStore('game', {
   }),
 
   actions: {
-    async createGame(joinCode: string, questions: { text: string; category: string }[]) {
+    async createGame(joinCode: string, questions: { text: string; category: number }[]) {
       try {
         const response = await axios.post('http://127.0.0.1:8000/api/questions/create', {
           join_code: joinCode,

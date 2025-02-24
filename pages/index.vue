@@ -1,4 +1,5 @@
 <template>
+  <joinedGame />
 
   
     <div class="flex flex-col min-h-screen">
@@ -48,12 +49,14 @@
           </ul>
         </div>
       </div>
-  
+      <startMenu />
+
+
       <div class="text-center fixed inset-x-0 bottom-36">
 
       </div>
 
-      <div class="text-center fixed inset-x-0 bottom-10">
+      <!-- <div class="text-center fixed inset-x-0 bottom-10">
         <NuxtLink to="/spill" class="text-gray-200 text-xl rounded bg-blue-600 py-3 pl-2 pr-1 inline-flex ">Regler
 
           <svg class="h-8 w-8 text-gray-200 ml-2"  width="24" height="24" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />  <line x1="3" y1="6" x2="3" y2="19" />  <line x1="12" y1="6" x2="12" y2="19" />  <line x1="21" y1="6" x2="21" y2="19" /></svg>
@@ -63,8 +66,17 @@
 
           <svg class="h-8 w-8 text-white ml-4"  width="24" height="24" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
         </NuxtLink>
-      </div>
+      </div> -->
     </div>
+
+
+
+
+    <!-- <script setup>
+      import joinedGame from '~/components/joinedGame.vue'
+
+      </script> -->
+
   </template>
   
   
@@ -72,8 +84,18 @@
 
   
   import { defineComponent, ref, onMounted } from 'vue';
-  
+  import joinedGame from '~/components/joinedGame.vue';
+  import startMenu from '~/components/startMenu.vue';
+
+
+
+
   export default defineComponent({
+    components: {
+    joinedGame,
+    startMenu,
+  },
+    
     setup() {
       const playerName = ref('');
       const players = ref<string[]>([]);
