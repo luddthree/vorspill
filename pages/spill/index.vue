@@ -6,46 +6,46 @@
     </div>
     <div>
         <h1 class="shead">Gjør eller drikk</h1>
-        <p class="stext">Her vil en enkelt spiller få sjangsen til å gjøre eller si noe, hvis ikke må de gjøre det tildelte antallet med pushups.</p>
+        <p class="stext">Her vil en enkelt spiller få sjangsen til å gjøre eller si noe, hvis ikke må de gjøre det tildelte antallet med slurker.</p>
     </div>
     <div>
         <h1 class="shead">Flasketuten</h1>
-        <p class="stext">Enkelt å greit, den flasketuten peker på må gjøre det tildelte antallet med pushups.</p>
+        <p class="stext">Enkelt å greit, den flasketuten peker på må gjøre det tildelte antallet med slurker.</p>
     </div>
     <div>
         <h1 class="shead">Pekeleken</h1>
-        <p class="stext">Her skal alle spillerne peke på en den personen i rommet de mener passer best til tittelen tildelt, den spilleren med flest fingre pekt mot seg må ta en pushup.</p>
+        <p class="stext">Her skal alle spillerne peke på en den personen i rommet de mener passer best til tittelen tildelt, den spilleren med flest fingre pekt mot seg må ta en slurk.</p>
     </div>
     <div>
         <h1 class="shead">Jeg har aldri</h1>
-        <p class="stext">Hvis du har gjort det som kommer opp på skjermen må du ta en pushup, her kan flere spillere måtte ta pushups.</p>
+        <p class="stext">Hvis du har gjort det som kommer opp på skjermen må du ta en slurk, her kan flere spillere måtte ta slurker.</p>
     </div>
     <div>
         <h1 class="shead">Slurk</h1>
-        <p class="stext">En spiller blir bedt om å ta et tilfeldig antall pushups.</p>
+        <p class="stext">En spiller blir bedt om å ta et tilfeldig antall slurker.</p>
     </div>
     <div>
         <h1 class="shead">Felles</h1>
-        <p class="stext">Spilleren må ta en pushup  hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
+        <p class="stext">Spilleren må ta en slurk  hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
         <div class="flex items-center justify-center mt-1">
         <iframe src="https://www.youtube.com/embed/iMRITRuseq4?si=-qT_5zeK02S0c9Ub&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     <div>
         <h1 class="shead">Gjett og drikk</h1>
-        <p class="stext">Du velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å ta pushups, gjetter du feil må du ta en pushu. Den riktige fargen er helt tilfeldig.</p>
+        <p class="stext">Du velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å ta slurker, gjetter du feil må du ta en pushu. Den riktige fargen er helt tilfeldig.</p>
     </div>
     <div>
         <h1 class="shead">Litt av hvert</h1>
         <p class="stext">Dette er en blanding av alle spillene over, der man ikke vet hva som blir det neste spillet.</p>
     </div>
     <div>
-        <h1 class="shead">pushups</h1>
-        <p class="stext">Spilleren må ta antallet pushups.</p>
+        <h1 class="shead">slurker</h1>
+        <p class="stext">Spilleren må ta antallet slurker.</p>
     </div>
     <div>
-        <h1 class="shead">Del ut pushups</h1>
-        <p class="stext">Spilleren kan dele ut antallet pushups til en eller flere spillere.</p>
+        <h1 class="shead">Del ut slurker</h1>
+        <p class="stext">Spilleren kan dele ut antallet slurker til en eller flere spillere.</p>
     </div>
     <div  class="mb-40">
     </div>

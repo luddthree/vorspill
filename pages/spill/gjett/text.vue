@@ -2,7 +2,7 @@
     <!-- <NuxtLink to="/spill/felles/game" class="w-full h-full absolute" style="z-index: 1;"></NuxtLink> -->
     <div class="min-h-screen flex flex-col items-center justify-center">
       <div class="text-center text-white font-bold ">
-        <p class="text-2xl">Gjett riktig farge eller ta en pushup!</p>
+        <p class="text-2xl">Gjett riktig farge eller ta en slurk!</p>
         <div class="mt-10">
           <div class="flex justify-center">
             <div class="flex flex-col items-center">

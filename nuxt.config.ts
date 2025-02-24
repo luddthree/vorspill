@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@pinia/nuxt'],
+
   app: {
     head: {
       script: [
@@ -11,19 +13,24 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   runtimeConfig: {
     public: {
+      // apiBase: 'https://ofl.vang.li',
+      apiBase: 'http://127.0.0.1:8000',
       gtagId: "G-XBCERVVBG8",
     }
   },
 
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-})
 
+  compatibilityDate: '2025-02-20',
+})

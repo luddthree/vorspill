@@ -3,7 +3,7 @@
       <div v-if="randomString" class="text-center font-bold">
         <p class="text-3xl mb-2">{{ randomString }}!</p>
         
-        <p class="text-2xl">eller ta {{ velgslurker }} pushups hver</p>
+        <p class="text-2xl">eller ta {{ velgslurker }} slurker hver</p>
 
 
       </div>
