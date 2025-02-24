@@ -14,6 +14,7 @@
     "@capacitor/cli": "^5.7.4",
     "@capacitor/core": "^5.7.4",
     "@capacitor/ios": "^5.7.4",
+    "@nuxtjs/sitemap": "^7.2.6",
     "@pinia/nuxt": "^0.10.1",
     "axios": "^1.7.9",
     "lucide-vue-next": "^0.475.0",

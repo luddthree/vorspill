@@ -1,7 +1,35 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt'],
+  compatibilityDate: '2025-02-20',
+  runtimeConfig: {
+    public: {
+      // apiBase: 'https://ofl.vang.li',
+      apiBase: 'http://127.0.0.1:8000',
+      gtagId: "G-XBCERVVBG8",
+    }
+  },
+  devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/sitemap',
+  ],
+  
+	sitemap: { // @ts-ignore
+		hostname: 'https://vorspill.no',
+		gzip: true,
+		routes: [
+		'/', 
+		],
+	},
+  
   app: {
     head: {
       script: [
@@ -13,24 +41,4 @@ export default defineNuxtConfig({
       ]
     }
   },
-
-  runtimeConfig: {
-    public: {
-      // apiBase: 'https://ofl.vang.li',
-      apiBase: 'http://127.0.0.1:8000',
-      gtagId: "G-XBCERVVBG8",
-    }
-  },
-
-  devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
-  compatibilityDate: '2025-02-20',
 })
