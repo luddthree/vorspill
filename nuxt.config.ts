@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-02-20',
   runtimeConfig: {
     public: {
-      // apiBase: 'https://ofl.vang.li',
-      apiBase: 'http://127.0.0.1:8000',
+      apiBase: 'https://vorspill.no',
+      // apiBase: 'http://127.0.0.1:8000',
       gtagId: "G-XBCERVVBG8",
     }
   },
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
   ],
-  
+
 	sitemap: { // @ts-ignore
 		hostname: 'https://vorspill.no',
 		gzip: true,

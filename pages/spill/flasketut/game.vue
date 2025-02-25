@@ -13,8 +13,8 @@
   
   const randomString = ref(''); 
   const stringList = ['kan dele ut 4 slurker!', 'kan dele ut 2 slurker!', 
-  'må ta 1 slurker!', 'må ta 2 slurker!', 'må ta 3 slurker!', 
-  'må ta 4 slurker!', 'kan stå over neste runde', 'må dra hjem']; 
+  'må drikke 1 slurker!', 'må drikke 2 slurker!', 'må drikke 3 slurker!', 
+  'må drikke 4 slurker!', 'kan stå over neste runde', 'må dra hjem']; 
   
   function pickRandomString() {
   const randomIndex = Math.floor(Math.random() * stringList.length); 

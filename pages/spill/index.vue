@@ -17,22 +17,22 @@
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">Pekeleken</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Her skal alle spillerne peke på en den personen i rommet de mener passer best til tittelen tildelt, den spilleren med flest fingre pekt mot seg må ta en slurk.</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Her skal alle spillerne peke på en den personen i rommet de mener passer best til tittelen tildelt, den spilleren med flest fingre pekt mot seg må drikke en slurk.</p>
     </div>
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">Jeg har aldri</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Hvis du har gjort det som kommer opp på skjermen må du ta en slurk, her kan flere spillere måtte ta slurker.</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Hvis du har gjort det som kommer opp på skjermen må du drikke en slurk, her kan flere spillere måtte drikke slurker.</p>
     </div>
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">Slurk</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">En spiller blir bedt om å ta et tilfeldig antall slurker.</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">En spiller blir bedt om å drikke et tilfeldig antall slurker.</p>
     </div>
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">Felles</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Spilleren må ta en slurk  hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Spilleren må drikke en slurk  hver gang felicita (fellesfitta), sies i sangen. Demonstrasjons video under</p>
         <div class="flex items-center justify-center mt-4">
             <iframe class="w-full sm:w-1/2 lg:w-1/3 aspect-w-16 aspect-h-9" src="https://www.youtube.com/embed/iMRITRuseq4?si=-qT_5zeK02S0c9Ub&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -40,7 +40,7 @@
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">Gjett og drikk</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Du velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å ta slurker, gjetter du feil må du ta en pushu. Den riktige fargen er helt tilfeldig.</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Du velger mellom 2 farger, hvis du gjetter den riktige fargen trenger du ikke å drikke slurker, gjetter du feil må du drikke en pushu. Den riktige fargen er helt tilfeldig.</p>
     </div>
 
     <div class="px-4 mt-6">
@@ -50,7 +50,7 @@
 
     <div class="px-4 mt-6">
         <h1 class="text-2xl text-white font-bold sm:text-3xl">slurker</h1>
-        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Spilleren må ta antallet slurker.</p>
+        <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-2">Spilleren må drikke antallet slurker.</p>
     </div>
 
     <div class="px-4 mt-6">

@@ -10,9 +10,13 @@ export const useGameStore = defineStore('game', {
   actions: {
     async createGame(joinCode: string, questions: { text: string; category: number }[]) {
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/questions/create', {
+        // Use runtimeConfig to get the API base URL
+        const config = useRuntimeConfig();
+        const apiBase = config.public.apiBase;
+
+        const response = await axios.post(`${apiBase}/questions/create`, {
           join_code: joinCode,
-          questions: questions
+          questions: questions,
         });
 
         this.message = response.data.message;
@@ -24,12 +28,16 @@ export const useGameStore = defineStore('game', {
 
     async fetchQuestions(joinCode: string) {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/questions/${joinCode}`);
+        // Use runtimeConfig to get the API base URL
+        const config = useRuntimeConfig();
+        const apiBase = config.public.apiBase;
+
+        const response = await axios.get(`${apiBase}/questions/${joinCode}`);
         this.questions = response.data;
       } catch (error: any) {
         this.message = 'Error fetching questions';
         console.error(error);
       }
-    }
-  }
+    },
+  },
 });
