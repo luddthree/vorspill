@@ -14,7 +14,7 @@ export const useGameStore = defineStore('game', {
         const config = useRuntimeConfig();
         const apiBase = config.public.apiBase;
 
-        const response = await axios.post(`${apiBase}/questions/create`, {
+        const response = await axios.post(`${apiBase}/api/questions/create`, {
           join_code: joinCode,
           questions: questions,
         });
@@ -32,7 +32,7 @@ export const useGameStore = defineStore('game', {
         const config = useRuntimeConfig();
         const apiBase = config.public.apiBase;
 
-        const response = await axios.get(`${apiBase}/questions/${joinCode}`);
+        const response = await axios.get(`${apiBase}/api/questions/${joinCode}`);
         this.questions = response.data;
       } catch (error: any) {
         this.message = 'Error fetching questions';
