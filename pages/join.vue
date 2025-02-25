@@ -126,7 +126,7 @@ const fetchQuestions = async () => {
 // Fetch most played games
 const fetchMostPlayedGames = async () => {
     try {
-        const response = await fetch('http://vorspill.no/api/games/most-played');
+        const response = await fetch('https://vorspill.no/api/games/most-played');
         // const response = await fetch('http://127.0.0.1:8000/api/games/most-played');
         const data = await response.json();
         mostPlayedGames.value = data;
