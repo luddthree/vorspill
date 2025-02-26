@@ -64,13 +64,13 @@
     <true/>
 
     <!-- App Transport Security (ATS) Configuration -->
-	<key>NSAppTransportSecurity</key>
+	<!-- <key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-	</dict>
+	</dict> -->
 
-    <!-- <key>NSAppTransportSecurity</key>
+    <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSExceptionDomains</key>
         <dict>
@@ -84,7 +84,7 @@
                 <true/>
             </dict>
         </dict>
-    </dict> -->
+    </dict>
 
     <!-- Allow Arbitrary Loads (if needed for other domains) -->
     <!--
