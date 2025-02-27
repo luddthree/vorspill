@@ -10,7 +10,7 @@
           </svg>
         </a>
       </div>
-      <div class="mt-10">
+      <div class="mt-20">
         <img src="/vorsspill.png" alt="logo" class="block mx-auto w-1/2 h-1/2">
       </div>
       <div>

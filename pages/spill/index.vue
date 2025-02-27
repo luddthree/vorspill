@@ -1,6 +1,6 @@
 <template>
     <joinedGame />
-    <div class="px-4">
+    <div class=" mt-24 px-4">
         <h1 class="text-3xl text-white text-center mt-10 font-bold">Hvordan spille</h1>
         <p class="text-gray-200 text-sm sm:text-base md:text-lg text-center mt-4">Spillet er et drikkespill og går ut på å gjøre spillerne så drita som mulig. Alt er helt tilfeldig så alle har like stor sjangse til å få bra runder som dårlige. Legg til spillere på startsiden og start spill! </p>
     </div>
@@ -62,7 +62,7 @@
 
     <startMenu />
 
-    <div class="text-left fixed inset-x-0 left-6 top-8" style="z-index: 2;">
+    <div class="text-left fixed inset-x-0 left-6 top-20" style="z-index: 2;">
         <NuxtLink to="/" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>

@@ -37,10 +37,10 @@ const showParagraph = computed(() => route.query.showParagraph === 'true');
 const randomString = ref('');
 const velgslurker = ref('');
 const stringList = [
-  'bytt drikke de neste 2 rundene', 'bytt drikke de neste 3 rundene',
-  'kyss hverandre på munnen', 'bytt plass resten av spillet', 'en av dere må drikke resten av drinken', 
-  'hva er det verste du vet med den andre?', 'rate den andres utseende ut av 10', 'Dans uten musikk i ett minutt',
-  'imiter den andre personen', 'lag en rap sang (freestyle) om den andre', 'hva er det mest irriterende med den andre?'
+  'Bytt drikke de neste 2 rundene', 'Bytt drikke de neste 3 rundene',
+  'Kyss hverandre på munnen', 'Bytt plass resten av spillet', 'En av dere må drikke resten av drinken', 
+  'Hva er det verste du vet med den andre?', 'Rate den andres utseende ut av 10', 'Dans uten musikk i ett minutt',
+  'Imiter den andre personen', 'Lag en rap sang (freestyle) om den andre', 'Hva er det mest irriterende med den andre?'
 ];
 const slurker = ['2', '3', '4', '5'];
 

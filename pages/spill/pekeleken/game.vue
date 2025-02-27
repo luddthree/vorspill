@@ -37,14 +37,11 @@ const showParagraph = computed(() => route.query.showParagraph === 'true');
 const randomString = ref('');
 const counter = ref(7);
 const stringList = [
-  'har dårligst musikksmak', 'kommer til å havne i fengsel', 'er mest uskyldig', 
-  'kommer til å ende opp som naver', 'har lavest iq', 'er mest nørd', 
-  'hadde sugd pikk for minst penger', 'er mest sannsynlig til å bli rik', 
-  'er mest sannsynlig til å bli kjendis', 'er mest sannsynlig til å bli president', 
-  'er mest sannsynlig til å bli en seriemorder', 'er mest sannsynlig til å bli en pornostjerne',
-  'er mest sannsynlig til å bli en narkoman', 'er mest sannsynlig til å bli en alkoholiker',
-  'kommer til å dø først', 'kommer til å dø sist', 'er minst populær blandt motsatte kjønn',
-  'er mest edru', 'er mest full', 'fortjener å drikke en slurk'
+  'Har dårligst musikksmak', 'Kommer til å havne i fengsel', 'Er mest uskyldig', 
+  'Kommer til å ende opp som naver', 'Har lavest iq', 'Er mest nørd', 'Er mest sannsynlig til å bli rik', 
+  'Er mest sannsynlig til å bli kjendis', 'Er mest sannsynlig til å bli president', 
+  'Er mest sannsynlig til å bli en seriemorder','Er mest sannsynlig til å bli en narkoman', 'Er mest sannsynlig til å bli en alkoholiker',
+  'Kommer til å dø først', 'Kommer til å dø sist', 'Er mest edru', 'Er mest full', 'Fortjener å drikke en slurk'
 ];
 
 const gameStore = useGameStore();

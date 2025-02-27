@@ -50,12 +50,13 @@ const stringList = [
   'Pek på den som har verst musikksmak', 'Pek på den som har dårligst stil', 
   'Pek på den som er minst attraktiv', 'Spill de neste 3 rundene i bare undertøy', 
   'Legg ut at du støtter putin på mystory', 'Ta en backflip', 'Hvem i rommet skulle du ønske ikke var her', 
-  'Vipps 100kr til 90550266', 'La alle få kile deg i 20 sek', 'Dra hjem', 'bytt klær med en i rommet', 
-  'La de andre gå igjennom telefonen din', 'pek på den du kunne banket i en slosskamp', 'si en hemmelighet du aldri har fortalt noen',
+  'Vipps 100kr til 90550266', 'La alle få kile deg i 20 sek', 'Dra hjem', 'Bytt klær med en i rommet', 
+  'La de andre gå igjennom telefonen din', 'Pek på den du kunne banket i en slosskamp', 'Si en hemmelighet du aldri har fortalt noen',
   'hvilken person i rommet har du mest lyst til å kysse', 'hvem i rommer ser ut som de har minst penis', 'stå på henda i 5 sekunder',
-  'Dans en fortnite dans', 'hvem i rommet er den dårligste vennen', 'hvem i rommet hadde du brydd deg minst om døde',
-  'la en annen slappe deg på rumpa', 'hvis du måtte ligget med et dyr, hvilket?', 'hvem i rommet ville du helt gitt oralsex?', 
-  'Dans uten musikk i ett minutt', 'les den siste teksmeldingen du skrev høyt'
+  'Dans en fortnite dans', 'Hvem i rommet er den dårligste vennen', 'Hvem i rommet hadde du brydd deg minst om døde',
+  'La en annen slappe deg på rumpa', 'Hvis du måtte ligget med et dyr, hvilket?', 
+  'Dans uten musikk i ett minutt', 'Les den siste teksmeldingen du skrev høyt', 
+  'Ring moren din å si du venter barn'
 ];
 const slurker = ['2', '3', '4', '5'];
 

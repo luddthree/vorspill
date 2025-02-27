@@ -37,12 +37,11 @@ const showParagraph = computed(() => route.query.showParagraph === 'true');
 const randomString = ref('');
 const waitString = ref(false);
 const stringList = [
-  'stjålet noe', 'blitt banka opp', 'fantasert om noen i rommet', 'prøvd å suge meg selv', 
-  'ligget med noen i rommet', 'drept noen', 'trudd jeg var homo', 'smakt på mitt eget tiss', 
-  'onanert til noen i rommet', 'snitcha på noen i rommet', 'spillt dette spillet', 
-  'banket opp noen', 'Jeg har aldri gått mer enn tre dager uten å dusje.', 'mistet lappen', 
-  'løyet til noen i rommet', 'fantasert om kjæresten til noen i rommet', 'krangla med noen i rommet', 
-  'misslikt noen i rommet', 'gjort noe ulovlig'
+  'Stjålet noe', 'Slitt banka opp', 'Fantasert om noen i rommet', 'Prøvd å suge meg selv', 
+  'Ligget med noen i rommet', 'Drept noen', 'Smakt på mitt eget tiss', 
+  'Snitcha på noen i rommet', 'Spillt dette spillet', 'Banket opp noen', 'Jeg har aldri gått mer enn tre dager uten å dusje.', 
+  'Mistet lappen', 'Løyet til noen i rommet', 'Krangla med noen i rommet', 
+  'Misslikt noen i rommet', 'Gjort noe ulovlig'
 ];
 
 const gameStore = useGameStore();

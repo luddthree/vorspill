@@ -1,7 +1,7 @@
 <template>
     <joinedGame />
     
-    <div class="p-5 mt-10 max-w-lg mx-auto">
+    <div class="p-5 mt-20 max-w-lg mx-auto">
         <h1 class="text-center font-bold text-2xl text-white mb-5">Bli med i et spill!</h1>
         
         <input 
@@ -68,7 +68,7 @@
                             <span class="text-white font-semibold">#{{ index + 1 }}</span>
                             <span class="text-gray-300">{{ game.join_code }}</span>
                         </div>
-                        <span class="text-gray-400">{{ game.plays }} spill</span>
+                        <span class="text-gray-400">{{ game.plays }} avspillinger</span>
                     </li>
                 </ul>
                 <p v-else class="text-gray-400 text-center py-3">Ingen spill spilt ennå</p>
@@ -78,11 +78,12 @@
     </div>
 
     <!-- Tilbakeknapp -->
-    <div class="fixed top-8 left-6 z-10">
-        <NuxtLink to="/" class="text-white bg-blue-700 hover:bg-blue-800 rounded-full p-3 inline-flex items-center transition-all">
-            <svg class="w-6 h-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <div class="text-left fixed inset-x-0 left-6 top-20" style="z-index: 2;">
+        <NuxtLink to="/" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
             </svg>
+            <span class="sr-only">Icon description</span>
         </NuxtLink>
     </div>
 
