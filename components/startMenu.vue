@@ -3,7 +3,7 @@ import { Play, Home, Users, PlusCircle, BookOpen } from 'lucide-vue-next';
 </script>
 
 <template>
-    <div class="fixed pb-7 inset-x-0 bottom-0 bg-gray-900 text-white py-1 shadow-lg flex justify-around">
+    <div class="fixed pb-3 inset-x-0 bottom-0 bg-gray-900 text-white py-1 shadow-lg flex justify-around">
         <NuxtLink to="/" class="flex flex-col items-center text-gray-300 hover:text-white pt-5 ">
             <Home class="h-7 w-7" />
             <span class="text-sm mt-1">Hjem</span>

@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
     <!-- Leave Button (Top Left) -->
-    <div v-if="joinCode" class="fixed pt-8 inset-x-0 top-0 text-center bg-red-600 text-white shadow-lg flex justify-between items-center p-1">
+    <div v-if="joinCode" class="fixed pt-1 inset-x-0 top-0 text-center bg-red-600 text-white shadow-lg flex justify-between items-center p-1">
         <!-- Leave Button -->
         <button @click="leaveGame" class="flex items-center gap-1 p-2 bg-red-700 hover:bg-red-800 rounded-lg text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out">
