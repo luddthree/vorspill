@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useGameStore } from '~/stores/game';
+import { Plus, ChevronDown } from 'lucide-vue-next'; // Import Lucide icons
 
 const showPopup = ref(false);
 const showPopup2 = ref(false);
@@ -68,19 +69,14 @@ import startMenu from '~/components/startMenu.vue';
                 @click="togglePopup" 
                 class="w-full bg-gray-800 text-white text-left font-semibold p-3 rounded-lg flex justify-between items-center"
             >
-                Gjør eller drikk
-                <svg 
+                <span>Gjør eller drikk</span>
+                <ChevronDown 
                     :class="{ 'rotate-180': showPopup }" 
-                    class="h-5 w-5 transition-transform"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
+                    class="w-5 h-5 transition-transform"
+                />
             </button>
             <div v-if="showPopup" class="bg-gray-700 rounded-lg mt-2 p-3 shadow-lg">
+                <p class="text-gray-300 text-sm mb-2">Spillerens navn "Ditt spørsmål" eller drikk "antall" slurker.</p>
                 <div v-for="(q, index) in questions[1]" :key="index" class="mb-2 flex items-center gap-2">
                     <input 
                         v-model="questions[1][index]" 
@@ -90,9 +86,9 @@ import startMenu from '~/components/startMenu.vue';
                     <button 
                         v-if="index === questions[1].length - 1" 
                         @click="addQuestion(1)" 
-                        class="bg-blue-500 rounded-full text-white px-2 text-xl font-bold"
+                        class="bg-blue-500 rounded-full text-white p-1 flex items-center justify-center"
                     >
-                        +
+                        <Plus class="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -104,19 +100,14 @@ import startMenu from '~/components/startMenu.vue';
                 @click="togglePopup2" 
                 class="w-full bg-gray-800 text-white text-left font-semibold p-3 rounded-lg flex justify-between items-center"
             >
-                Jeg har aldri
-                <svg 
+                <span>Jeg har aldri</span>
+                <ChevronDown 
                     :class="{ 'rotate-180': showPopup2 }" 
-                    class="h-5 w-5 transition-transform"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
+                    class="w-5 h-5 transition-transform"
+                />
             </button>
-            <div v-if="showPopup2" class="bg-gray-700  rounded-lg mt-2 p-3 shadow-lg">
+            <div v-if="showPopup2" class="bg-gray-700 rounded-lg mt-2 p-3 shadow-lg">
+                <p class="text-gray-300 text-sm mb-2">Alle sammen... jeg har aldri "ditt spørsmål".</p>
                 <div v-for="(q, index) in questions[2]" :key="index" class="mb-2 flex items-center gap-2">
                     <input 
                         v-model="questions[2][index]" 
@@ -126,9 +117,9 @@ import startMenu from '~/components/startMenu.vue';
                     <button 
                         v-if="index === questions[2].length - 1" 
                         @click="addQuestion(2)" 
-                        class="bg-blue-500 rounded-full text-white px-2 text-xl font-bold"
+                        class="bg-blue-500 rounded-full text-white p-1 flex items-center justify-center"
                     >
-                        +
+                        <Plus class="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -140,19 +131,14 @@ import startMenu from '~/components/startMenu.vue';
                 @click="togglePopup3" 
                 class="w-full bg-gray-800 text-white text-left font-semibold p-3 rounded-lg flex justify-between items-center"
             >
-                Peleken
-                <svg 
+                <span>Peleken</span>
+                <ChevronDown 
                     :class="{ 'rotate-180': showPopup3 }" 
-                    class="h-5 w-5 transition-transform"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
+                    class="w-5 h-5 transition-transform"
+                />
             </button>
-            <div v-if="showPopup3" class="bg-gray-700  rounded-lg mt-2 p-3 shadow-lg">
+            <div v-if="showPopup3" class="bg-gray-700 rounded-lg mt-2 p-3 shadow-lg">
+                <p class="text-gray-300 text-sm mb-2">Alle sammen... pek på den som "ditt spørsmål".</p>
                 <div v-for="(q, index) in questions[3]" :key="index" class="mb-2 flex items-center gap-2">
                     <input 
                         v-model="questions[3][index]" 
@@ -162,9 +148,9 @@ import startMenu from '~/components/startMenu.vue';
                     <button 
                         v-if="index === questions[3].length - 1" 
                         @click="addQuestion(3)" 
-                        class="bg-blue-500 rounded-full text-white px-2 text-xl font-bold"
+                        class="bg-blue-500 rounded-full text-white p-1 flex items-center justify-center"
                     >
-                        +
+                        <Plus class="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -176,19 +162,14 @@ import startMenu from '~/components/startMenu.vue';
                 @click="togglePopup4" 
                 class="w-full bg-gray-800 text-white text-left font-semibold p-3 rounded-lg flex justify-between items-center"
             >
-                Gjør eller drikk (2 personer)
-                <svg 
+                <span>Gjør eller drikk (2 personer)</span>
+                <ChevronDown 
                     :class="{ 'rotate-180': showPopup4 }" 
-                    class="h-5 w-5 transition-transform"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
+                    class="w-5 h-5 transition-transform"
+                />
             </button>
-            <div v-if="showPopup4" class="bg-gray-700  rounded-lg mt-2 p-3 shadow-lg">
+            <div v-if="showPopup4" class="bg-gray-700 rounded-lg mt-2 p-3 shadow-lg">
+                <p class="text-gray-300 text-sm mb-2">Spiller 1 og spiller 2... "Ditt spørsmål" eller drikk "antall" slurker hver.</p>
                 <div v-for="(q, index) in questions[4]" :key="index" class="mb-2 flex items-center gap-2">
                     <input 
                         v-model="questions[4][index]" 
@@ -198,9 +179,9 @@ import startMenu from '~/components/startMenu.vue';
                     <button 
                         v-if="index === questions[4].length - 1" 
                         @click="addQuestion(4)" 
-                        class="bg-blue-500 rounded-full text-white px-2 text-xl font-bold"
+                        class="bg-blue-500 rounded-full text-white p-1 flex items-center justify-center"
                     >
-                        +
+                        <Plus class="w-5 h-5" />
                     </button>
                 </div>
             </div>
@@ -211,7 +192,7 @@ import startMenu from '~/components/startMenu.vue';
             <button 
                 @click="createGame" 
                 class="bg-blue-600 hover:bg-blue-700 text-white w-full p-3 rounded-lg font-semibold transition-all"
-                >
+            >
                 Lag Spill!
             </button>
         </div>
@@ -233,3 +214,5 @@ import startMenu from '~/components/startMenu.vue';
 
     <div class="mt-32"></div>
 </template>
+
+

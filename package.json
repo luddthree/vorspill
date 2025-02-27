@@ -17,6 +17,7 @@
     "@nuxtjs/sitemap": "^7.2.6",
     "@pinia/nuxt": "^0.10.1",
     "axios": "^1.7.9",
+    "lucide": "^0.476.0",
     "lucide-vue-next": "^0.475.0",
     "nitropack": "^2.10.4",
     "nuxt": "^3.15.4",
