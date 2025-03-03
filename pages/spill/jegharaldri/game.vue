@@ -37,7 +37,7 @@ const showParagraph = computed(() => route.query.showParagraph === 'true');
 const randomString = ref('');
 const waitString = ref(false);
 const stringList = [
-  'Stjålet noe', 'Slitt banka opp', 'Fantasert om noen i rommet', 'Prøvd å suge meg selv', 
+  'Stjålet noe', 'Blitt banka opp', 'Fantasert om noen i rommet',  
   'Ligget med noen i rommet', 'Drept noen', 'Smakt på mitt eget tiss', 
   'Snitcha på noen i rommet', 'Spillt dette spillet', 'Banket opp noen', 'Jeg har aldri gått mer enn tre dager uten å dusje.', 
   'Mistet lappen', 'Løyet til noen i rommet', 'Krangla med noen i rommet', 

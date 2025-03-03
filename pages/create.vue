@@ -1,13 +1,14 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useGameStore } from '~/stores/game';
 import { Plus, ChevronDown } from 'lucide-vue-next'; // Import Lucide icons
+import joinedGame from '~/components/joinedGame.vue';
+import startMenu from '~/components/startMenu.vue';
 
 const showPopup = ref(false);
 const showPopup2 = ref(false);
 const showPopup3 = ref(false);
 const showPopup4 = ref(false);
-
 const togglePopup = () => {
     showPopup.value = !showPopup.value;
 };
@@ -20,7 +21,6 @@ const togglePopup3 = () => {
 const togglePopup4 = () => {
     showPopup4.value = !showPopup4.value;
 };
-
 const gameStore = useGameStore();
 const joinCode = ref('');
 const questions = ref({
@@ -29,14 +29,11 @@ const questions = ref({
     3: [''],
     4: ['']
 });
-
 const addQuestion = (category) => {
     questions.value[category].push('');
 };
-
 const createGame = () => {
     const formattedQuestions = [];
-
     for (const category in questions.value) {
         questions.value[category].forEach(text => {
             if (text.trim()) {
@@ -44,14 +41,14 @@ const createGame = () => {
             }
         });
     }
-
-    gameStore.createGame(joinCode.value, formattedQuestions);
+    gameStore.createGame(joinCode.value, formattedQuestions); // This will also join the game
 };
 
-import joinedGame from '~/components/joinedGame.vue';
-import startMenu from '~/components/startMenu.vue';
+// Load from localStorage on component mount
+onMounted(() => {
+    gameStore.loadFromLocalStorage();
+});
 </script>
-
 <template>
     <joinedGame />
     <div class="p-5 mt-20 max-w-lg mx-auto">
@@ -62,7 +59,6 @@ import startMenu from '~/components/startMenu.vue';
             class="border p-2 mb-3 w-full rounded-lg shadow-sm"
         >
         <p class="text-white text-sm mb-5">Anbefaler minst 5 spørsmål per felt</p>
-
         <!-- Category 1: Gjør eller drikk -->
         <div class="mb-5">
             <button 
@@ -93,7 +89,6 @@ import startMenu from '~/components/startMenu.vue';
                 </div>
             </div>
         </div>
-
         <!-- Category 2: Jeg har aldri -->
         <div class="mb-5">
             <button 
@@ -124,7 +119,6 @@ import startMenu from '~/components/startMenu.vue';
                 </div>
             </div>
         </div>
-
         <!-- Category 3: Peleken -->
         <div class="mb-5">
             <button 
@@ -155,7 +149,6 @@ import startMenu from '~/components/startMenu.vue';
                 </div>
             </div>
         </div>
-
         <!-- Category 4: Ekstra oppgaver -->
         <div class="mb-5">
             <button 
@@ -186,7 +179,6 @@ import startMenu from '~/components/startMenu.vue';
                 </div>
             </div>
         </div>
-
         <!-- Centered Create Game Button -->
         <div class="flex justify-center mt-5">
             <button 
@@ -196,10 +188,8 @@ import startMenu from '~/components/startMenu.vue';
                 Lag Spill!
             </button>
         </div>
-
         <p class="mt-3 text-white text-center">{{ gameStore.message }}</p>
     </div>
-
     <!-- Tilbakeknapp -->
     <div class="text-left fixed inset-x-0 left-6 top-20" style="z-index: 2;">
         <NuxtLink to="/" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -209,10 +199,6 @@ import startMenu from '~/components/startMenu.vue';
             <span class="sr-only">Icon description</span>
         </NuxtLink>
     </div>
-
     <startMenu />
-
     <div class="mt-32"></div>
 </template>
-
-

@@ -2,6 +2,11 @@
   "appId": "Vorspill",
   "appName": "Vorspill",
   "webDir": "dist",
-  "bundledWebRuntime": false
-}
+  "bundledWebRuntime": false,
 
+  "plugins": {
+    "WebView": {
+      "allowZoom": false 
+    }
+  }
+}

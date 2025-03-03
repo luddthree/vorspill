@@ -2,26 +2,26 @@
   <joinedGame />
     <div class="text-center font-bold mt-20">
         <NuxtLink to="/">
-            <img src="/vorsspill.png" alt="logo" class="w-1/4 h-1/4 mx-auto">
+            <img src="/vorsspill.png" alt="logo" class="w-1/4 h-1/4 mx-auto ">
         </NuxtLink>
     </div>
   
-    <div class=" text-center mt-2 font-bold">
-    <button  @click="spill1()" class="animate-button rounded mt-4 rotate-1 text-orange-900 transition ease-in-out delay-50 bg-orange-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-600 duration-50 ...">Gjør eller drikk</button>
+    <div class=" text-center mt-2 font-bold ">
+    <button  @click="spill1()" class="animate-button shadow-xl rounded mt-4 rotate-1 text-orange-900 transition ease-in-out delay-50 bg-orange-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-orange-600 duration-50 ...">Gjør eller drikk</button>
   
-      <button @click="spill2()" class="animate-button rounded mt-4 -rotate-1 text-red-900 transition ease-in-out delay-50 bg-red-600 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-50 ...">Flasketuten</button>
+      <button @click="spill2()" class="animate-button shadow-xl rounded mt-4 -rotate-1 text-red-900 transition ease-in-out delay-50 bg-red-600 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-50 ...">Flasketuten</button>
   
-      <button @click="spill3()" class="animate-button rounded text-yellow-800 mt-4 rotate-1 transition ease-in-out delay-50 bg-yellow-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-50 ...">Pekeleken</button>
+      <button @click="spill3()" class="animate-button shadow-xl rounded text-yellow-800 mt-4 rotate-1 transition ease-in-out delay-50 bg-yellow-500 py-3 px-24 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-50 ...">Pekeleken</button>
   
-      <button @click="spill4()" class="animate-button rounded text-green-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
+      <button @click="spill4()" class="animate-button shadow-xl rounded text-green-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-lime-600 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-lime-700 duration-50 ...">Jeg har aldri</button>
 
-      <button @click="spill5()" class="animate-button rounded text-teal-800 mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Slurk</button>
+      <button @click="spill5()" class="animate-button shadow-xl rounded text-teal-800 mt-4 -rotate-1 transition ease-in-out delay-50 bg-teal-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-50 ...">Slurk</button>
 
-      <button @click="spill6()" class="animate-button rounded text-blue-900 mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Felles</button>
+      <button @click="spill6()" class="animate-button shadow-xl rounded text-blue-900 mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Felles</button>
 
-      <button @click="spill7()" class="animate-button rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Gjett og drikk</button>
+      <button @click="spill7()" class="animate-button shadow-xl rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Gjett og drikk</button>
 
-      <button @click="mix()" class="animate-button rounded text-white mt-10 font-bold rotate-0 transition mb-10 ease-in-out delay-50 bg-pink-500 py-4 px-16 text-4xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
+      <button @click="mix()" class="animate-button shadow-2xl rounded text-white mt-6 font-bold rotate-0 transition mb-10 ease-in-out delay-50 bg-pink-500 py-4 px-16 text-4xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
 
 
     </div>

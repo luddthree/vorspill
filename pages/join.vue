@@ -17,7 +17,7 @@
             Bli med i spill
         </button>
 
-        <p v-if="gameStore.message" class="mt-3 text-red-500 text-center">{{ gameStore.message }}</p>
+        <p v-if="gameStore.message" class="mt-3 text-white text-center">{{ gameStore.message }}</p>
 
 
 
@@ -120,7 +120,6 @@ const fetchQuestions = async () => {
         localStorage.setItem('questions', JSON.stringify(gameStore.questions));
     }
 
-    navigateTo('/');
 
 };
 
