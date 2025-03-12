@@ -55,25 +55,37 @@
 
         <!-- Most Played Games Section -->
         <div class="mt-10 mb-32">
-            <h2 class="text-center text-white text-xl font-semibold mb-3">Mest spilte spill</h2>
-            <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
-                <ul v-if="mostPlayedGames.length" class="divide-y divide-gray-600">
-                    <li 
-                        v-for="(game, index) in mostPlayedGames" 
-                        :key="game.id"
-                        class="flex items-center justify-between py-3 px-4 hover:bg-gray-700 rounded-lg transition-all"
-                    >
-                        <div class="flex items-center space-x-3">
-                            <span v-if="index === 0" class="text-yellow-400 text-xl">🏆</span>
-                            <span class="text-white font-semibold">#{{ index + 1 }}</span>
-                            <span class="text-gray-300">{{ game.join_code }}</span>
-                        </div>
-                        <span class="text-gray-400">{{ game.plays }} avspillinger</span>
-                    </li>
-                </ul>
-                <p v-else class="text-gray-400 text-center py-3">Ingen spill spilt ennå</p>
-            </div>
-        </div>
+    <h2 class="text-center text-white text-xl font-semibold mb-3">Mest spilte spill</h2>
+    <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
+        <ul v-if="mostPlayedGames.length" class="divide-y divide-gray-600">
+            <li 
+                v-for="(game, index) in mostPlayedGames" 
+                :key="game.id"
+                class="flex items-center justify-between py-3 px-4 hover:bg-gray-700 rounded-lg transition-all"
+            >
+                <div class="flex items-center space-x-3">
+                    <span v-if="index === 0" class="text-yellow-400 text-xl">🏆</span>
+                    <span class="text-white font-semibold">#{{ index + 1 }}</span>
+                    <span class="text-gray-300">{{ game.join_code }}</span>
+                </div>
+                <span class="text-gray-400">{{ game.plays }} avspillinger</span>
+            </li>
+        </ul>
+
+        <!-- Spinner instead of 'Ingen spill spilt ennå' -->
+        <div v-else class="flex items-center justify-center py-10 space-x-2">
+    <div class="h-3 w-3 bg-blue-500 rounded-full animate-bounce"></div>
+    <div class="h-3 w-3 bg-blue-500 rounded-full animate-bounce delay-200"></div>
+    <div class="h-3 w-3 bg-blue-500 rounded-full animate-bounce delay-400"></div>
+</div>
+
+
+
+
+
+    </div>
+</div>
+
 
     </div>
 

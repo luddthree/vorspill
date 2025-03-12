@@ -44,6 +44,17 @@ const createGame = () => {
     gameStore.createGame(joinCode.value, formattedQuestions); // This will also join the game
 };
 
+const notRobotChecked = ref(false);
+
+const handleCreateGame = () => {
+    if (!notRobotChecked.value) {
+        alert("Vennligst bekreft at du ikke er en robot!");
+        return;
+    }
+    createGame();
+};
+
+
 // Load from localStorage on component mount
 onMounted(() => {
     gameStore.loadFromLocalStorage();
@@ -179,15 +190,29 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <!-- Centered Create Game Button -->
-        <div class="flex justify-center mt-5">
-            <button 
-                @click="createGame" 
-                class="bg-blue-600 hover:bg-blue-700 text-white w-full p-3 rounded-lg font-semibold transition-all"
-            >
-                Lag Spill!
-            </button>
-        </div>
+   <!-- "I'm not a robot" Verification -->
+<div class="flex items-center justify-center mt-5">
+    <label class="flex items-center space-x-2 bg-gray-800 text-white p-3 rounded-lg cursor-pointer select-none">
+        <input 
+            type="checkbox" 
+            v-model="notRobotChecked" 
+            class="form-checkbox h-5 w-5 text-green-500"
+        />
+        <span>Jeg er et menneske</span>
+    </label>
+</div>
+
+<!-- Updated Create Game Button -->
+<div class="flex justify-center mt-5">
+    <button 
+        @click="handleCreateGame"
+        :disabled="!notRobotChecked"
+        class="bg-blue-600 hover:bg-blue-700 text-white w-full p-3 rounded-lg font-semibold transition-all disabled:bg-gray-500 disabled:cursor-not-allowed"
+    >
+        Lag Spill!
+    </button>
+</div>
+
         <p class="mt-3 text-white text-center">{{ gameStore.message }}</p>
     </div>
     <!-- Tilbakeknapp -->
