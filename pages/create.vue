@@ -70,9 +70,14 @@ const addQuestion = (category) => {
 onMounted(() => {
     gameStore.loadFromLocalStorage();
 });
+
+
+import joinedGame from '~/components/joinedGame.vue';
+import startMenu from '~/components/startMenu.vue';
 </script>
 
 <template>
+     <joinedGame />
     <div class="p-5 mt-20 max-w-lg mx-auto">
         <h1 class="text-center font-bold text-2xl p-3 text-white">Lag ditt eget spill!</h1>
         <input 
@@ -241,4 +246,5 @@ onMounted(() => {
             <span class="sr-only">Icon description</span>
         </NuxtLink>
     </div>
+    <startMenu />
 </template>
