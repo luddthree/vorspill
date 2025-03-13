@@ -2,37 +2,19 @@
 import { ref, onMounted } from 'vue';
 import { useGameStore } from '~/stores/game';
 import { Plus, ChevronDown } from 'lucide-vue-next'; // Import Lucide icons
-import joinedGame from '~/components/joinedGame.vue';
-import startMenu from '~/components/startMenu.vue';
+import Turnstile from 'vue-turnstile';
 
-const showPopup = ref(false);
-const showPopup2 = ref(false);
-const showPopup3 = ref(false);
-const showPopup4 = ref(false);
-const togglePopup = () => {
-    showPopup.value = !showPopup.value;
-};
-const togglePopup2 = () => {
-    showPopup2.value = !showPopup2.value;
-};
-const togglePopup3 = () => {
-    showPopup3.value = !showPopup3.value;
-};
-const togglePopup4 = () => {
-    showPopup4.value = !showPopup4.value;
-};
+const isVerified = ref('');
+const turnstileToken = ref('');
 const gameStore = useGameStore();
 const joinCode = ref('');
-const questions = ref({
-    1: [''],
-    2: [''],
-    3: [''],
-    4: ['']
-});
-const addQuestion = (category) => {
-    questions.value[category].push('');
-};
+const questions = ref({ 1: [''], 2: [''], 3: [''], 4: [''] });
+
 const createGame = () => {
+    if (!turnstileToken.value) {
+        alert('Vennligst bekreft at du ikke er en robot!');
+        return;
+    }
     const formattedQuestions = [];
     for (const category in questions.value) {
         questions.value[category].forEach(text => {
@@ -41,27 +23,56 @@ const createGame = () => {
             }
         });
     }
-    gameStore.createGame(joinCode.value, formattedQuestions); // This will also join the game
-};
-
-const notRobotChecked = ref(false);
-
-const handleCreateGame = () => {
-    if (!notRobotChecked.value) {
-        alert("Vennligst bekreft at du ikke er en robot!");
-        return;
-    }
-    createGame();
+    gameStore.createGame(joinCode.value, formattedQuestions, turnstileToken.value);
 };
 
 
-// Load from localStorage on component mount
+// const handleSuccess = () => {
+//     console.log('val man')
+//     console.log('Turnstile success. Token:', this.turnstileToken)
+//     isVerified.value = true;
+//     turnstileToken.value = token;
+
+// }
+
+
+const handleSuccess = (token) => {
+    console.log("Turnstile verification successful", token);
+    isVerified.value = true;
+    turnstileToken.value = token;
+};
+
+const showPopup = ref(false);
+const showPopup2 = ref(false);
+const showPopup3 = ref(false);
+const showPopup4 = ref(false);
+
+const togglePopup = () => {
+    showPopup.value = !showPopup.value;
+};
+
+const togglePopup2 = () => {
+    showPopup2.value = !showPopup2.value;
+};
+
+const togglePopup3 = () => {
+    showPopup3.value = !showPopup3.value;
+};
+
+const togglePopup4 = () => {
+    showPopup4.value = !showPopup4.value;
+};
+
+const addQuestion = (category) => {
+    questions.value[category].push('');
+};
+
 onMounted(() => {
     gameStore.loadFromLocalStorage();
 });
 </script>
+
 <template>
-    <joinedGame />
     <div class="p-5 mt-20 max-w-lg mx-auto">
         <h1 class="text-center font-bold text-2xl p-3 text-white">Lag ditt eget spill!</h1>
         <input 
@@ -190,29 +201,35 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-   <!-- "I'm not a robot" Verification -->
-<div class="flex items-center justify-center mt-5">
-    <label class="flex items-center space-x-2 bg-gray-800 text-white p-3 rounded-lg cursor-pointer select-none">
-        <input 
-            type="checkbox" 
-            v-model="notRobotChecked" 
-            class="form-checkbox h-5 w-5 text-green-500"
-        />
-        <span>Jeg er et menneske</span>
-    </label>
+        <!-- Cloudflare Turnstile Widget -->
+       
+       
+       <div class="flex justify-center">
+        <Turnstile
+    siteKey="0x4AAAAAABAcikFZA99HXDJm"
+    :modelValue="turnstileToken"
+    @update:modelValue="(token) => {
+        console.log('Received token:', token)
+        turnstileToken = token
+        if (token) {
+            handleSuccess(token)
+        }
+        
+    }"
+/>
+
 </div>
 
-<!-- Updated Create Game Button -->
-<div class="flex justify-center mt-5">
-    <button 
-        @click="handleCreateGame"
-        :disabled="!notRobotChecked"
-        class="bg-blue-600 hover:bg-blue-700 text-white w-full p-3 rounded-lg font-semibold transition-all disabled:bg-gray-500 disabled:cursor-not-allowed"
-    >
-        Lag Spill!
-    </button>
-</div>
-
+        <!-- Create Game Button -->
+        <div class="flex justify-center mt-5">
+            <button 
+                @click="createGame"
+                :disabled="!isVerified"
+                class="bg-blue-600 hover:bg-blue-700 text-white w-full p-3 rounded-lg font-semibold transition-all disabled:bg-gray-500 disabled:cursor-not-allowed"
+            >
+                Lag Spill!
+            </button>
+        </div>
         <p class="mt-3 text-white text-center">{{ gameStore.message }}</p>
     </div>
     <!-- Tilbakeknapp -->
@@ -224,6 +241,4 @@ onMounted(() => {
             <span class="sr-only">Icon description</span>
         </NuxtLink>
     </div>
-    <startMenu />
-    <div class="mt-32"></div>
 </template>

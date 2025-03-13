@@ -9,22 +9,23 @@ export const useGameStore = defineStore('game', {
     joinCode: '',
   }),
   actions: {
-    async createGame(joinCode: string, questions: { text: string; category: number }[]) {
+    async createGame(joinCode: string, questions: { text: string; category: number }, turnstileToken: string) {
       try {
-        // Use runtimeConfig to get the API base URL
-        const config = useRuntimeConfig();
-        const apiBase = config.public.apiBase;
-        const response = await axios.post(`${apiBase}/api/questions/create`, {
-          join_code: joinCode,
-          questions: questions,
-        });
-        this.message = response.data.message;
-        this.joinGame(joinCode); // Automatically join the game after creation
+          const config = useRuntimeConfig();
+          const apiBase = config.public.apiBase;
+          const response = await axios.post(`${apiBase}/api/questions/create`, {
+              join_code: joinCode,
+              questions: questions,
+              turnstileToken: turnstileToken,
+          });
+          this.message = response.data.message;
+          this.joinGame(joinCode); 
       } catch (error: any) {
-        this.message = error.response?.data?.message || 'Ooops, noe gikk galt!';
-        console.error(error.response?.data);
+          this.message = error.response?.data?.message || 'Ooops, noe gikk galt!';
+          console.error(error.response?.data);
       }
-    },
+  },
+  
     async joinGame(joinCode: string) {
       try {
         // Use runtimeConfig to get the API base URL
