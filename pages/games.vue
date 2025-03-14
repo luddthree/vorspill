@@ -19,14 +19,21 @@
 
       <button @click="spill6()" class="animate-button shadow-xl rounded text-blue-900 mt-4 rotate-1 transition ease-in-out delay-50 bg-blue-500 py-3 px-32 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-50 ...">Felles</button>
 
-      <button @click="spill7()" class="animate-button shadow-xl rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Gjett og drikk</button>
+      <button @click="spill7()" class="animate-button shadow-xl rounded text-purple-900 mt-4 rotate-0 transition ease-in-out delay-50 bg-purple-500 py-3 px-20 text-2xl hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 duration-50 ...">Svart eller hvitt</button>
 
       <button @click="mix()" class="animate-button shadow-2xl rounded text-white mt-6 font-bold rotate-0 transition mb-10 ease-in-out delay-50 bg-pink-500 py-4 px-16 text-4xl hover:-translate-y-1 hover:scale-110 hover:bg-pink-600 duration-50 ...">Litt av hvert!</button>
 
 
     </div>
 
-
+    <div class="text-left fixed inset-x-0 left-6 top-20" style="z-index: 2;">
+        <NuxtLink to="/" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+            </svg>
+            <span class="sr-only">Icon description</span>
+        </NuxtLink>
+    </div>
   </template>
   
   <script setup>

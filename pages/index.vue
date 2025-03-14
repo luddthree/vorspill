@@ -18,19 +18,19 @@
       </div>
       <div class="mt-10">
         <form @submit.prevent="addPlayer" class="text-center">
-          <input type="text" v-model="playerName" placeholder="Legg til spillere..." class="border-2 border-gray-300 pr-24 pl-2 py-3 rounded-xl">
+          <input type="text" v-model="playerName" placeholder="Legg til spillere..." class="shadow-xl border-2 border-gray-300 pr-24 pl-2 py-3 rounded-xl">
           <br>
-          <button type="submit" class="text-gray-300 font-bold text-lg p-2 mt-1">Legg til</button>
+          <button type="submit" class="text-gray-300 font-bold text-lg p-2  mt-1">Legg til</button>
         </form>
       </div>
 
       <div class="mt-4">
         <ul>
-          <div class="text-center mb-4 text-gray-400">
+          <div class="text-center  mb-4 text-gray-400">
             <p>Spillere:</p>
           </div>
           <ul class="flex justify-center flex-wrap">
-            <li v-for="(player, index) in players" :key="index" @click="deletePlayer(index)" class="justify-between items-center bg-slate-800 rounded-lg cursor-pointer hover:text-red-600 text-white mb-2 py-1 px-4 space-x-2 inline-flex ml-1 mr-1 text-center">
+            <li v-for="(player, index) in players" :key="index" @click="deletePlayer(index)" class="shadow-lg justify-between items-center bg-slate-800 rounded-lg cursor-pointer hover:text-red-600 text-white mb-2 py-1 px-4 space-x-2 inline-flex ml-1 mr-1 text-center">
               <span class="text-lg flex-1 py-0.5">{{ player }}</span>
               <svg class="h-4 w-4 text-red-500" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
